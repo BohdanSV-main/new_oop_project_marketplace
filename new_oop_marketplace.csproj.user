@@ -10,8 +10,11 @@
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProductItemControl.cs">
+    <Compile Update="ProductItemControls.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="RemoveProductForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="RoleSelectorForm.cs">
       <SubType>Form</SubType>

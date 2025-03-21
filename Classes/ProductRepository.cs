@@ -20,6 +20,11 @@ namespace Marketplace
             return new List<Product>(products);
         }
 
+        public Product GetProductById(int id)
+        {
+            return products.Find(p => p.Id == id);
+        }
+
         public void AddProduct(Product product)
         {
             products.Add(product);
@@ -28,8 +33,11 @@ namespace Marketplace
 
         public void RemoveProduct(Product product)
         {
-            products.Remove(product);
-            SaveProducts();
+            if (product != null)
+            {
+                products.Remove(product);
+                SaveProducts();
+            }
         }
 
         private void SaveProducts()
