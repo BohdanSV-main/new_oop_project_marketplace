@@ -7,7 +7,7 @@ namespace new_oop_marketplace
 {
     public partial class LoginForm : Form
     {
-        private readonly IUserRepository _userRepository;
+        private readonly LoginService _loginService;
         private Label lblLogin;
         private Label lblPassword;
         private TextBox txtLogin;
@@ -18,7 +18,7 @@ namespace new_oop_marketplace
         public LoginForm(IUserRepository userRepository)
         {
             InitializeComponent();
-            _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+            _loginService = new LoginService(userRepository);
         }
         private void InitializeComponent()
         {
@@ -117,63 +117,24 @@ namespace new_oop_marketplace
                 return;
             }
 
-            if (isRegisterMode)
+            bool success = isRegisterMode ?
+                _loginService.RegisterUser(login, password) :
+                _loginService.LoginUser(login, password);
+
+            if (success && !isRegisterMode)
             {
-                RegisterUser(login, password);
-            }
-            else
-            {
-                LoginUser(login, password);
-            }
-        }
-        private void RegisterUser(string login, string password)
-        {
-            if (_userRepository.GetUserByLogin(login) != null)
-            {
-                MessageBox.Show("Такий користувач вже існує!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
-
-            bool isAdmin = false; 
-
-            if (login.ToLower() == "admin")
-            {
-                isAdmin = true;
-            }
-
-            _userRepository.AddUser(new User(login, hashedPassword, isAdmin));
-
-            MessageBox.Show("Реєстрація успішна!", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            SwitchMode();
-        }
-
-
-        private void LoginUser(string login, string password)
-        {
-            User user = _userRepository.GetUserByLogin(login);
-
-            if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
-            {
-                SessionManager.SetCurrentUser(user); 
-
-                MessageBox.Show($"Вітаємо, {user.Login}!", "Успішний вхід", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                Form1 mainForm = new Form1();
                 this.Hide();
-                mainForm.ShowDialog();
+                using (Form1 mainForm = new Form1())
+                {
+                    mainForm.ShowDialog();
+                }
                 this.Close();
             }
-            else
+            else if (success)
             {
-                MessageBox.Show("Невірний логін або пароль!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SwitchMode();
             }
         }
-
-
-
-
         private void SwitchMode()
         {
             isRegisterMode = !isRegisterMode;

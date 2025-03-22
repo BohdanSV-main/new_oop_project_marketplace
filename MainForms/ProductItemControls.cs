@@ -7,8 +7,6 @@ namespace Marketplace
 {
     public partial class ProductItemControl : UserControl
     {
-        public event EventHandler RemoveClicked;
-
         public string ProductName
         {
             get => lblName.Text;
@@ -37,8 +35,6 @@ namespace Marketplace
         {
             InitializeComponent();
         }
-
-        private Button btnRemove;
         private Label lblName;
         private Label lblPrice;
         private Label lblDescription;
@@ -46,26 +42,12 @@ namespace Marketplace
 
         private void InitializeComponent()
         {
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(ProductItemControl));
-            btnRemove = new Button();
             pictureBox = new PictureBox();
             lblName = new Label();
             lblPrice = new Label();
             lblDescription = new Label();
             ((ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
-            // 
-            // btnRemove
-            // 
-            btnRemove.BackColor = Color.Tomato;
-            btnRemove.BackgroundImage = (Image)resources.GetObject("btnRemove.BackgroundImage");
-            btnRemove.BackgroundImageLayout = ImageLayout.Stretch;
-            btnRemove.Location = new Point(216, 3);
-            btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(31, 29);
-            btnRemove.TabIndex = 0;
-            btnRemove.UseVisualStyleBackColor = false;
-            btnRemove.Click += btnRemove_Click_1;
             // 
             // pictureBox
             // 
@@ -113,10 +95,10 @@ namespace Marketplace
             Controls.Add(lblDescription);
             Controls.Add(lblPrice);
             Controls.Add(lblName);
-            Controls.Add(btnRemove);
             Controls.Add(pictureBox);
             DoubleBuffered = true;
             ForeColor = Color.Black;
+            Margin = new Padding(15);
             Name = "ProductItemControl";
             Size = new Size(252, 252);
             ((ISupportInitialize)pictureBox).EndInit();
@@ -126,12 +108,6 @@ namespace Marketplace
 
         private void lblPrice_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnRemove_Click_1(object sender, EventArgs e)
-        {
-                RemoveClicked?.Invoke(this, EventArgs.Empty);
 
         }
     }
