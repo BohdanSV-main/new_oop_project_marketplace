@@ -31,6 +31,12 @@ namespace Marketplace
             set => pictureBox.Image = value;
         }
 
+        public string ProductId 
+        {
+            get => lblId.Text;
+            set => lblId.Text = "ID: " + value;
+        }
+
         public ProductItemControl()
         {
             InitializeComponent();
@@ -38,6 +44,7 @@ namespace Marketplace
         private Label lblName;
         private Label lblPrice;
         private Label lblDescription;
+        private Label lblId;
         private PictureBox pictureBox;
 
         private void InitializeComponent()
@@ -46,12 +53,13 @@ namespace Marketplace
             lblName = new Label();
             lblPrice = new Label();
             lblDescription = new Label();
+            lblId = new Label();
             ((ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
             // pictureBox
             // 
-            pictureBox.Location = new Point(3, 4);
+            pictureBox.Location = new Point(0, 28);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(244, 132);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
@@ -62,7 +70,7 @@ namespace Marketplace
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 12F);
-            lblName.Location = new Point(7, 139);
+            lblName.Location = new Point(4, 163);
             lblName.Name = "lblName";
             lblName.Size = new Size(36, 21);
             lblName.TabIndex = 2;
@@ -72,7 +80,7 @@ namespace Marketplace
             // 
             lblPrice.AutoSize = true;
             lblPrice.Font = new Font("Segoe UI", 12F);
-            lblPrice.Location = new Point(7, 179);
+            lblPrice.Location = new Point(4, 203);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(44, 21);
             lblPrice.TabIndex = 3;
@@ -83,15 +91,26 @@ namespace Marketplace
             // 
             lblDescription.AutoEllipsis = true;
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(7, 211);
+            lblDescription.Location = new Point(4, 235);
             lblDescription.Name = "lblDescription";
             lblDescription.Size = new Size(67, 15);
             lblDescription.TabIndex = 4;
             lblDescription.Text = "Description";
             // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Font = new Font("Segoe UI", 12F);
+            lblId.Location = new Point(3, 4);
+            lblId.Name = "lblId";
+            lblId.Size = new Size(25, 21);
+            lblId.TabIndex = 5;
+            lblId.Text = "ID";
+            // 
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            Controls.Add(lblId);
             Controls.Add(lblDescription);
             Controls.Add(lblPrice);
             Controls.Add(lblName);
@@ -100,7 +119,7 @@ namespace Marketplace
             ForeColor = Color.Black;
             Margin = new Padding(15);
             Name = "ProductItemControl";
-            Size = new Size(252, 252);
+            Size = new Size(254, 281);
             ((ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();

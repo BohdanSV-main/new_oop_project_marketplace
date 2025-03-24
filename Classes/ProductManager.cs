@@ -31,6 +31,7 @@ namespace Marketplace
         {
             ProductItemControl productItem = new ProductItemControl
             {
+                ProductId = product.Id.ToString(),
                 ProductName = product.Name,
                 ProductPrice = product.Price.ToString(),
                 ProductDescription = product.Description

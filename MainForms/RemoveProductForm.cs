@@ -8,7 +8,7 @@ namespace Marketplace
     public partial class RemoveProductForm : Form
     {
         private readonly IProductRepository _repository;
-        public event EventHandler<Product> OnProductRemoved; // Подія для видалення
+        public event EventHandler<Product> OnProductRemoved;
 
         public RemoveProductForm(IProductRepository repository)
         {
@@ -65,7 +65,7 @@ namespace Marketplace
 
             if (cmbProducts.Items.Count > 0)
             {
-                cmbProducts.SelectedIndex = 0; // Вибрати перший товар
+                cmbProducts.SelectedIndex = 0;
             }
         }
 
@@ -80,9 +80,9 @@ namespace Marketplace
             if (productToRemove != null)
             {
                 _repository.RemoveProduct(productToRemove);
-                OnProductRemoved?.Invoke(this, productToRemove); // Викликаємо подію для оновлення UI
+                OnProductRemoved?.Invoke(this, productToRemove);
                 MessageBox.Show($"Товар \"{selectedProductName}\" видалено!", "Успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadProductNames(); // Оновити список
+                LoadProductNames();
             }
             else
             {

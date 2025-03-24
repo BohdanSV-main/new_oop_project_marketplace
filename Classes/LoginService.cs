@@ -23,8 +23,20 @@ namespace new_oop_marketplace
             }
 
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password, 13);
-            bool isAdmin = login.ToLower() == "admin";
+            bool isAdmin = false;
 
+            if(login.ToLower() == "admin")
+            {
+                isAdmin = true;
+            }
+            if(login.ToLower() == "misha")
+                {
+                isAdmin = true;
+            }
+            if (login.ToLower() == "bohdan")
+            {
+                isAdmin = true;
+            }
             _userRepository.AddUser(new User(login, hashedPassword, isAdmin));
 
             MessageBox.Show("Реєстрація успішна!", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);

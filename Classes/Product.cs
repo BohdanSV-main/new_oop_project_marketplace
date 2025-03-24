@@ -12,7 +12,7 @@
         }
         public static int GenerateId()
         {
-            return Guid.NewGuid().GetHashCode();
+            return Math.Abs(Guid.NewGuid().GetHashCode());
         }
 
     }
