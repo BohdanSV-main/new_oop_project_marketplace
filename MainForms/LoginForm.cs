@@ -36,18 +36,19 @@ namespace new_oop_marketplace
             lblLogin.AutoSize = true;
             lblLogin.BackColor = Color.White;
             lblLogin.Font = new Font("Segoe UI", 12F);
-            lblLogin.Location = new Point(419, 146);
+            lblLogin.Location = new Point(391, 146);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(52, 21);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Логін:";
+            lblLogin.Click += lblLogin_Click;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
             lblPassword.BackColor = Color.White;
             lblPassword.Font = new Font("Segoe UI", 12F);
-            lblPassword.Location = new Point(419, 196);
+            lblPassword.Location = new Point(391, 196);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(66, 21);
             lblPassword.TabIndex = 1;
@@ -56,14 +57,15 @@ namespace new_oop_marketplace
             // 
             // txtLogin
             // 
-            txtLogin.Location = new Point(496, 144);
+            txtLogin.Location = new Point(463, 146);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(250, 23);
             txtLogin.TabIndex = 2;
+            txtLogin.TextChanged += txtLogin_TextChanged;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(496, 194);
+            txtPassword.Location = new Point(463, 194);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(250, 23);
             txtPassword.TabIndex = 3;
@@ -71,7 +73,7 @@ namespace new_oop_marketplace
             // btnAction
             // 
             btnAction.Font = new Font("Segoe UI", 12F);
-            btnAction.Location = new Point(463, 285);
+            btnAction.Location = new Point(463, 286);
             btnAction.Name = "btnAction";
             btnAction.Size = new Size(189, 28);
             btnAction.TabIndex = 4;
@@ -100,6 +102,7 @@ namespace new_oop_marketplace
             Controls.Add(txtLogin);
             Controls.Add(lblPassword);
             Controls.Add(lblLogin);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             RightToLeft = RightToLeft.No;
             ResumeLayout(false);
@@ -148,6 +151,16 @@ namespace new_oop_marketplace
         }
 
         private void lblPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
         {
 
         }

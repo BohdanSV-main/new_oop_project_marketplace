@@ -19,6 +19,7 @@ namespace Marketplace
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveProductForm));
             cmbProducts = new ComboBox();
             btnRemove = new Button();
             SuspendLayout();
@@ -45,6 +46,7 @@ namespace Marketplace
             Controls.Add(cmbProducts);
             Controls.Add(btnRemove);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RemoveProductForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Видалення товару";

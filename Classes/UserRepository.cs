@@ -40,15 +40,6 @@ namespace Marketplace
                 users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
             }
         }
-        public void MakeUserAdmin(string login)
-        {
-            User user = GetUserByLogin(login);
-            if (user != null)
-            {
-                user.IsAdmin = true;
-                SaveUsers();
-            }
-        }
 
     }
 }

@@ -24,6 +24,7 @@ namespace Marketplace
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             txtName = new TextBox();
             txtPrice = new TextBox();
             txtDescription = new TextBox();
@@ -106,6 +107,7 @@ namespace Marketplace
             Controls.Add(btnSelectImage);
             Controls.Add(pictureBoxPreview);
             Controls.Add(btnSave);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddProductForm";
             Text = "Додати товар";
             ((System.ComponentModel.ISupportInitialize)pictureBoxPreview).EndInit();

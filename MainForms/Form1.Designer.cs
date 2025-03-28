@@ -186,8 +186,9 @@
             Controls.Add(panel1);
             Controls.Add(mainFrame);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Sky Marketplace";
             Load += Form1_Load;
             mainFrame.ResumeLayout(false);
             mainPage.ResumeLayout(false);
