@@ -7,13 +7,13 @@ namespace Marketplace
 {
     public partial class RemoveProductForm : Form
     {
-        private readonly IProductRepository _repository;
+        private readonly IDataStorage<Product> _storage;
         public event EventHandler<Product> OnProductRemoved;
 
-        public RemoveProductForm(IProductRepository repository)
+        public RemoveProductForm(IDataStorage<Product> storage)
         {
             InitializeComponent();
-            _repository = repository;
+            _storage = storage;
             LoadProductNames();
         }
 
@@ -59,7 +59,7 @@ namespace Marketplace
             if (cmbProducts == null) return;
 
             cmbProducts.Items.Clear();
-            List<Product> products = _repository.GetAllProducts();
+            List<Product> products = _storage.GetAll();
             foreach (var product in products)
             {
                 cmbProducts.Items.Add(product.Name);
@@ -77,11 +77,11 @@ namespace Marketplace
             if (cmbProducts == null || cmbProducts.SelectedItem == null) return;
 
             string selectedProductName = cmbProducts.SelectedItem.ToString();
-            Product productToRemove = _repository.GetAllProducts().FirstOrDefault(p => p.Name == selectedProductName);
+            Product productToRemove = _storage.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
 
             if (productToRemove != null)
             {
-                _repository.RemoveProduct(productToRemove);
+                _storage.Delete(productToRemove.Id);
                 OnProductRemoved?.Invoke(this, productToRemove);
                 MessageBox.Show($"Товар \"{selectedProductName}\" видалено!", "Успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadProductNames();

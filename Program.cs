@@ -12,7 +12,12 @@ namespace Marketplace
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IUserRepository userRepository = new UserRepository();
+            JsonStorage<Product> productStorage = new JsonStorage<Product>("products.json");
+            JsonStorage<User> userStorage = new JsonStorage<User>("users.json");
+
+            IProductRepository productRepository = new ProductRepository(productStorage);
+            IUserRepository userRepository = new UserRepository(userStorage);
+
             LoginForm loginForm = new LoginForm(userRepository);
 
             if (loginForm.ShowDialog() == DialogResult.OK)

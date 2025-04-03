@@ -1,58 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
+﻿using Marketplace;
 
-namespace Marketplace
+public class ProductRepository : IProductRepository
 {
-    public class ProductRepository: IProductRepository
+    private readonly IDataStorage<Product> _storage;
+
+    public ProductRepository(IDataStorage<Product> storage)
     {
-        private List<Product> products = new List<Product>();
-        private readonly string filePath = "products.json";
+        _storage = storage;
+    }
 
-        public ProductRepository()
-        {
-            LoadProducts();
-        }
+    public void AddProduct(Product product)
+    {
+        _storage.Add(product);
+    }
 
-        public List<Product> GetAllProducts()
-        {
-            return new List<Product>(products);
-        }
+    public void UpdateProduct(Product product)
+    {
+        _storage.Update(product);
+    }
 
-        public Product GetProductById(int id)
-        {
-            return products.Find(p => p.Id == id);
-        }
+    public void RemoveProduct(Product product)
+    {
+        _storage.Delete(product.Id);
+        _storage.Save();
+    }
 
-        public void AddProduct(Product product)
-        {
-            products.Add(product);
-            SaveProducts();
-        }
 
-        public void RemoveProduct(Product product)
-        {
-            if (product != null)
-            {
-                products.Remove(product);
-                SaveProducts();
-            }
-        }
+    public Product? GetProductById(int id)
+    {
+        return _storage.GetById(id);
+    }
 
-        private void SaveProducts()
-        {
-            string json = JsonSerializer.Serialize(products);
-            File.WriteAllText(filePath, json);
-        }
-
-        private void LoadProducts()
-        {
-            if (File.Exists(filePath))
-            {
-                string json = File.ReadAllText(filePath);
-                products = JsonSerializer.Deserialize<List<Product>>(json) ?? new List<Product>();
-            }
-        }
+    public List<Product> GetAllProducts()
+    {
+        return _storage.GetAll();
+    }
+    public IDataStorage<Product> GetStorage()
+    {
+        return _storage;
     }
 }
