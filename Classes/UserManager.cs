@@ -14,9 +14,11 @@ namespace Marketplace
             _addProductPage = addProductPage;
         }
 
+
         public void CheckUserAccess()
         {
-            if (SessionManager.CurrentUser == null)
+
+            if (SessionManager.CurrentUser == null)// don`t touch. Idk but work
             {
                 MessageBox.Show("Помилка: користувач не знайдений!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -34,5 +36,6 @@ namespace Marketplace
                 }
             }
         }
+
     }
 }

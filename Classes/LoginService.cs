@@ -1,9 +1,8 @@
-﻿using BCrypt.Net;
+﻿using System;
 using Marketplace;
-using System;
-using System.Windows.Forms;
+using BCrypt.Net;
 
-namespace new_oop_marketplace
+namespace Marketplace
 {
     public class LoginService
     {
@@ -11,51 +10,42 @@ namespace new_oop_marketplace
 
         public LoginService(IUserRepository userRepository)
         {
-            _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+            _userRepository = userRepository;
         }
+
+        public bool LoginUser(string login, string password)
+        {
+            var user = _userRepository.GetUserByLogin(login);
+
+            if (user == null)
+            {
+                return false;
+            }
+
+            if (!BCrypt.Net.BCrypt.Verify(password, user.Password))
+            {
+                return false;
+            }
+
+            SessionManager.SetCurrentUser(user);
+            return true;
+        }
+
 
         public bool RegisterUser(string login, string password)
         {
             if (_userRepository.GetUserByLogin(login) != null)
             {
-                MessageBox.Show("Такий користувач вже існує!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password, 13);
-            bool isAdmin = false;
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
-            if(login.ToLower() == "admin")
-            {
-                isAdmin = true;
-            }
-            if(login.ToLower() == "misha")
-                {
-                isAdmin = true;
-            }
-            if (login.ToLower() == "bohdan")
-            {
-                isAdmin = true;
-            }
-            _userRepository.AddUser(new User(login, hashedPassword, isAdmin));
+            int userId = _userRepository.GetNextUserId();
 
-            MessageBox.Show("Реєстрація успішна!", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var user = new User(userId, login, hashedPassword, false);
+            _userRepository.AddUser(user);
             return true;
-        }
-
-        public bool LoginUser(string login, string password)
-        {
-            User user = _userRepository.GetUserByLogin(login);
-
-            if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
-            {
-                SessionManager.SetCurrentUser(user);
-                MessageBox.Show($"Вітаємо, {user.Login}!", "Успішний вхід", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
-            }
-
-            MessageBox.Show("Невірний логін або пароль!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return false;
         }
     }
 }

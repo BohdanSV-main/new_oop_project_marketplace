@@ -1,4 +1,5 @@
-﻿public static class SessionManager
+﻿using Marketplace;
+public static class SessionManager
 {
     public static User CurrentUser { get; private set; }
 

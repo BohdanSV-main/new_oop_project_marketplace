@@ -1,45 +1,48 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.Json;
+﻿using Marketplace;
+using User = Marketplace.User;//just work
 
-namespace Marketplace
+public class UserRepository : IUserRepository
 {
-    public class UserRepository : IUserRepository
+    private readonly IDataStorage<User> _storage;
+
+    public UserRepository(IDataStorage<User> storage)
     {
-        private readonly string filePath = "users.json";
-        private List<User> users = new List<User>();
+        _storage = storage;
+    }
 
-        public UserRepository()
+    public void AddUser(User user)
+    {
+        _storage.Add(user);
+        _storage.Save();
+    }
+
+    public void UpdateUser(User user)
+    {
+        _storage.Update(user);
+    }
+
+    public void DeleteUser(int id)
+    {
+        _storage.Delete(id);
+    }
+
+    public User? GetUserByLogin(string login)
+    {
+        return _storage.GetAll().FirstOrDefault(u => u.Login == login);
+    }
+
+    public int GetNextUserId()
+    {
+        var users = _storage.GetAll();
+        if (users.Count == 0)
         {
-            LoadUsers();
+            return 1;
         }
+        return users.Max(u => u.Id) + 1;
+    }
 
-        public void AddUser(User user)
-        {
-            users.Add(user);
-            SaveUsers();
-        }
-
-        public User GetUserByLogin(string login)
-        {
-            return users.FirstOrDefault(u => u.Login == login);
-        }
-
-        private void SaveUsers()
-        {
-            string json = JsonSerializer.Serialize(users);
-            File.WriteAllText(filePath, json);
-        }
-
-        private void LoadUsers()
-        {
-            if (File.Exists(filePath))
-            {
-                string json = File.ReadAllText(filePath);
-                users = JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
-            }
-        }
-
+    public List<User> GetAllUsers()
+    {
+        return _storage.GetAll();
     }
 }

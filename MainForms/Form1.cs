@@ -1,7 +1,4 @@
 using Marketplace;
-using Microsoft.VisualBasic.ApplicationServices;
-using Microsoft.VisualBasic.Logging;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace new_oop_marketplace
 {
@@ -9,11 +6,17 @@ namespace new_oop_marketplace
     {
         private ProductManager _productManager;
         private UserManager _userManager;
-        private ProductRepository _productRepository = new ProductRepository();
+        private ProductRepository _productRepository;
+        private UserRepository _userRepository;
 
         public Form1()
         {
             InitializeComponent();
+            IDataStorage<Product> productStorage = new JsonStorage<Product>("products.json");
+            IDataStorage<User> userStorage = new JsonStorage<User>("users.json");
+            _productRepository = new ProductRepository(productStorage);
+            _userRepository = new UserRepository(userStorage);
+
             _productManager = new ProductManager(_productRepository, flowLayoutPanelProducts);
             _userManager = new UserManager(mainFrame, addProductPage);
 
@@ -55,7 +58,7 @@ namespace new_oop_marketplace
 
         private void btnOpenRemoveForm_Click(object sender, EventArgs e)
         {
-            RemoveProductForm removeForm = new RemoveProductForm(_productRepository);
+            RemoveProductForm removeForm = new RemoveProductForm(_productRepository.GetStorage());
             removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
             removeForm.ShowDialog();
         }
@@ -67,7 +70,9 @@ namespace new_oop_marketplace
         private void menuItemLogout_Click(object sender, EventArgs e)
         {
             SessionManager.Logout();
-            LoginForm loginForm = new LoginForm(new UserRepository());
+
+            LoginForm loginForm = new LoginForm(_userRepository);
+
             this.Hide();
             loginForm.ShowDialog();
             this.Close();

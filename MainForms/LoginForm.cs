@@ -15,11 +15,13 @@ namespace new_oop_marketplace
         private Button btnAction;
         private Button btnSwitch;
         private bool isRegisterMode = false;
+
         public LoginForm(IUserRepository userRepository)
         {
             InitializeComponent();
             _loginService = new LoginService(userRepository);
         }
+
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
@@ -41,7 +43,6 @@ namespace new_oop_marketplace
             lblLogin.Size = new Size(52, 21);
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Логін:";
-            lblLogin.Click += lblLogin_Click;
             // 
             // lblPassword
             // 
@@ -53,7 +54,6 @@ namespace new_oop_marketplace
             lblPassword.Size = new Size(66, 21);
             lblPassword.TabIndex = 1;
             lblPassword.Text = "Пароль:";
-            lblPassword.Click += lblPassword_Click;
             // 
             // txtLogin
             // 
@@ -61,7 +61,6 @@ namespace new_oop_marketplace
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(250, 23);
             txtLogin.TabIndex = 2;
-            txtLogin.TextChanged += txtLogin_TextChanged;
             // 
             // txtPassword
             // 
@@ -69,6 +68,7 @@ namespace new_oop_marketplace
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(250, 23);
             txtPassword.TabIndex = 3;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // btnAction
             // 
@@ -137,7 +137,12 @@ namespace new_oop_marketplace
             {
                 SwitchMode();
             }
+            else
+            {
+                MessageBox.Show("Невірний логін або пароль!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void SwitchMode()
         {
             isRegisterMode = !isRegisterMode;
@@ -148,21 +153,6 @@ namespace new_oop_marketplace
         private void btnSwitch_Click(object sender, EventArgs e)
         {
             SwitchMode();
-        }
-
-        private void lblPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
