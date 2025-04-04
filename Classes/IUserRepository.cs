@@ -2,10 +2,9 @@
 
 namespace Marketplace
 {
-    public interface IUserRepository
+    public interface IUserRepository : IGeneralProps<User>
     {
         User GetUserByLogin(string login);
-        void AddUser(User user);
         int GetNextUserId();
     }
 }

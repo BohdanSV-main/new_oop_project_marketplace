@@ -4,10 +4,10 @@ using Marketplace;
 
 namespace Marketplace
 {
-    public interface IProductRepository
+    public interface IProductRepository : IGeneralProps<Product>
     {
         List<Product> GetAllProducts();
-        void AddProduct(Product product);
-        void RemoveProduct(Product product);
+        IDataStorage<Product> GetStorage();
     }
+
 }

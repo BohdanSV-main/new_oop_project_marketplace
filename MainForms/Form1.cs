@@ -36,7 +36,7 @@ namespace new_oop_marketplace
             {
                 if (addProductForm.ShowDialog() == DialogResult.OK)
                 {
-                    _productRepository.AddProduct(addProductForm.NewProduct);
+                    _productRepository.Add(addProductForm.NewProduct);
                     _productManager.AddProductToUI(addProductForm.NewProduct);
                 }
             }

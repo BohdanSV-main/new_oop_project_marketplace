@@ -1,29 +1,15 @@
 ﻿using Marketplace;
 using User = Marketplace.User;//just work
 
-public class UserRepository : IUserRepository
+public class UserRepository : GeneralProps<User>, IUserRepository
+
 {
+
     private readonly IDataStorage<User> _storage;
 
-    public UserRepository(IDataStorage<User> storage)
+    public UserRepository(IDataStorage<User> storage) : base(storage)
     {
         _storage = storage;
-    }
-
-    public void AddUser(User user)
-    {
-        _storage.Add(user);
-        _storage.Save();
-    }
-
-    public void UpdateUser(User user)
-    {
-        _storage.Update(user);
-    }
-
-    public void DeleteUser(int id)
-    {
-        _storage.Delete(id);
     }
 
     public User? GetUserByLogin(string login)

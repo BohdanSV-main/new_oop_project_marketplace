@@ -44,7 +44,7 @@ namespace Marketplace
             int userId = _userRepository.GetNextUserId();
 
             var user = new User(userId, login, hashedPassword, false);
-            _userRepository.AddUser(user);
+            _userRepository.Add(user);
             return true;
         }
     }
