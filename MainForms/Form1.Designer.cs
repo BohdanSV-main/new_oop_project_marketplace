@@ -37,14 +37,19 @@
             addProductPage = new TabPage();
             btnOpenRemoveForm = new Button();
             addProduct = new Button();
+            pageShoppingList = new TabPage();
+            ConfirmOrderButton = new Button();
+            pageSoldList = new TabPage();
             panel1 = new Panel();
             marketName = new Label();
             btnUser = new Button();
             userMenu = new ContextMenuStrip(components);
             menuItemLogout = new ToolStripMenuItem();
+            cartPanel = new FlowLayoutPanel();
             mainFrame.SuspendLayout();
             mainPage.SuspendLayout();
             addProductPage.SuspendLayout();
+            pageShoppingList.SuspendLayout();
             panel1.SuspendLayout();
             userMenu.SuspendLayout();
             SuspendLayout();
@@ -53,6 +58,8 @@
             // 
             mainFrame.Controls.Add(mainPage);
             mainFrame.Controls.Add(addProductPage);
+            mainFrame.Controls.Add(pageShoppingList);
+            mainFrame.Controls.Add(pageSoldList);
             mainFrame.Location = new Point(12, 65);
             mainFrame.Name = "mainFrame";
             mainFrame.SelectedIndex = 0;
@@ -127,6 +134,38 @@
             addProduct.UseVisualStyleBackColor = false;
             addProduct.Click += addProduct_Click;
             // 
+            // pageShoppingList
+            // 
+            pageShoppingList.BackColor = Color.FromArgb(224, 224, 224);
+            pageShoppingList.Controls.Add(cartPanel);
+            pageShoppingList.Controls.Add(ConfirmOrderButton);
+            pageShoppingList.Location = new Point(4, 24);
+            pageShoppingList.Name = "pageShoppingList";
+            pageShoppingList.Padding = new Padding(3);
+            pageShoppingList.Size = new Size(1413, 699);
+            pageShoppingList.TabIndex = 2;
+            pageShoppingList.Text = "Список покупок";
+            // 
+            // ConfirmOrderButton
+            // 
+            ConfirmOrderButton.Location = new Point(97, 604);
+            ConfirmOrderButton.Name = "ConfirmOrderButton";
+            ConfirmOrderButton.Size = new Size(459, 52);
+            ConfirmOrderButton.TabIndex = 1;
+            ConfirmOrderButton.Text = "Підтвердити замовлення";
+            ConfirmOrderButton.UseVisualStyleBackColor = true;
+            ConfirmOrderButton.Click += ConfirmOrderButton_Click;
+            // 
+            // pageSoldList
+            // 
+            pageSoldList.BackColor = Color.FromArgb(224, 224, 224);
+            pageSoldList.Location = new Point(4, 24);
+            pageSoldList.Name = "pageSoldList";
+            pageSoldList.Padding = new Padding(3);
+            pageSoldList.Size = new Size(1413, 699);
+            pageSoldList.TabIndex = 3;
+            pageSoldList.Text = "Проданий товар";
+            // 
             // panel1
             // 
             panel1.BackColor = SystemColors.MenuHighlight;
@@ -177,6 +216,16 @@
             menuItemLogout.Text = "Вийти";
             menuItemLogout.Click += menuItemLogout_Click;
             // 
+            // cartPanel
+            // 
+            cartPanel.AutoScroll = true;
+            cartPanel.FlowDirection = FlowDirection.TopDown;
+            cartPanel.Location = new Point(63, 24);
+            cartPanel.Name = "cartPanel";
+            cartPanel.Size = new Size(971, 316);
+            cartPanel.TabIndex = 2;
+            cartPanel.WrapContents = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -193,6 +242,7 @@
             mainFrame.ResumeLayout(false);
             mainPage.ResumeLayout(false);
             addProductPage.ResumeLayout(false);
+            pageShoppingList.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             userMenu.ResumeLayout(false);
@@ -213,5 +263,9 @@
         private ContextMenuStrip userMenu;
         private ToolStripMenuItem menuItemLogout;
         private ComboBox comboBoxSort;
+        private TabPage pageShoppingList;
+        private TabPage pageSoldList;
+        private Button ConfirmOrderButton;
+        private FlowLayoutPanel cartPanel;
     }
 }

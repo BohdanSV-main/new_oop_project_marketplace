@@ -4,18 +4,21 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using new_oop_marketplace;
 
 namespace Marketplace
 {
     public class ProductManager
     {
         private readonly ProductRepository _productRepository;
+        private ShoppingCartManager _shoppingCartManager;
         private FlowLayoutPanel _productPanel;
 
-        public ProductManager(ProductRepository productRepository, FlowLayoutPanel productPanel)
+        public ProductManager(ProductRepository productRepository, FlowLayoutPanel productPanel, ShoppingCartManager shoppingCartManager)
         {
             _productRepository = productRepository;
             _productPanel = productPanel;
+            _shoppingCartManager = shoppingCartManager;
         }
 
         public void LoadProducts()
@@ -41,6 +44,14 @@ namespace Marketplace
             {
                 productItem.ProductImage = Image.FromFile(product.ImagePath);
             }
+
+            productItem.SetCartManager(_shoppingCartManager);
+            productItem.ProductAddedToCart += (s, e) =>
+            {
+                var form = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+                form?.UpdateCartUI();
+            };
+
             _productPanel.Controls.Add(productItem);
         }
 

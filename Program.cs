@@ -14,6 +14,9 @@ namespace Marketplace
 
             JsonStorage<Product> productStorage = new JsonStorage<Product>("products.json");
             JsonStorage<User> userStorage = new JsonStorage<User>("users.json");
+            IDataStorage<CartItem> cartStorage = new JsonStorage<CartItem>("cart.json");
+            var shoppingCartRepository = new ShoppingCartRepository(cartStorage);
+
 
             IProductRepository productRepository = new ProductRepository(productStorage);
             IUserRepository userRepository = new UserRepository(userStorage);
@@ -22,7 +25,7 @@ namespace Marketplace
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new Form1()); // Запускаємо головне вікно після успішного входу
+                Application.Run(new Form1());
             }
         }
     }

@@ -31,7 +31,7 @@ namespace Marketplace
             set => pictureBox.Image = value;
         }
 
-        public string ProductId 
+        public string ProductId
         {
             get => lblId.Text;
             set => lblId.Text = "ID: " + value;
@@ -45,7 +45,10 @@ namespace Marketplace
         private Label lblPrice;
         private Label lblDescription;
         private Label lblId;
+        private Button addToCartButton;
         private PictureBox pictureBox;
+        private ShoppingCartManager _shoppingCartManager;
+        public event EventHandler ProductAddedToCart;
 
         private void InitializeComponent()
         {
@@ -54,6 +57,7 @@ namespace Marketplace
             lblPrice = new Label();
             lblDescription = new Label();
             lblId = new Label();
+            addToCartButton = new Button();
             ((ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -107,9 +111,22 @@ namespace Marketplace
             lblId.TabIndex = 5;
             lblId.Text = "ID";
             // 
+            // addToCartButton
+            // 
+            addToCartButton.BackColor = Color.FromArgb(128, 255, 128);
+            addToCartButton.BackgroundImage = new_oop_marketplace.Properties.Resources.shopping_cart;
+            addToCartButton.BackgroundImageLayout = ImageLayout.Stretch;
+            addToCartButton.Location = new Point(220, 2);
+            addToCartButton.Name = "addToCartButton";
+            addToCartButton.Size = new Size(24, 23);
+            addToCartButton.TabIndex = 6;
+            addToCartButton.UseVisualStyleBackColor = false;
+            addToCartButton.Click += addToCartButton_Click;
+            // 
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            Controls.Add(addToCartButton);
             Controls.Add(lblId);
             Controls.Add(lblDescription);
             Controls.Add(lblPrice);
@@ -124,10 +141,37 @@ namespace Marketplace
             ResumeLayout(false);
             PerformLayout();
         }
+        public void SetCartManager(ShoppingCartManager cartManager)
+        {
+            _shoppingCartManager = cartManager;
+        }
 
         private void lblPrice_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addToCartButton_Click(object sender, EventArgs e)
+        {
+            if (SessionManager.CurrentUser == null || SessionManager.CurrentUser.IsAdmin) return;
+
+            if (_shoppingCartManager == null)
+            {
+                MessageBox.Show("Кошик не ініціалізований");
+                return;
+            }
+
+            Product product = new Product(
+                int.Parse(ProductId.Replace("ID: ", "")),
+                ProductName,
+                ProductPrice.Replace("Ціна: ", "").Replace(" грн", ""),
+                ProductDescription,
+                null // Якщо немає шляху до картинки
+            );
+
+            _shoppingCartManager.AddToCart(product);
+            MessageBox.Show("Товар додано в корзину");
+            ProductAddedToCart?.Invoke(this, EventArgs.Empty);
         }
     }
 }
