@@ -4,18 +4,21 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using new_oop_marketplace;
 
 namespace Marketplace
 {
     public class ProductManager
     {
         private readonly ProductRepository _productRepository;
+        private ShoppingCartManager _shoppingCartManager;
         private FlowLayoutPanel _productPanel;
 
-        public ProductManager(ProductRepository productRepository, FlowLayoutPanel productPanel)
+        public ProductManager(ProductRepository productRepository, FlowLayoutPanel productPanel, ShoppingCartManager shoppingCartManager)
         {
             _productRepository = productRepository;
             _productPanel = productPanel;
+            _shoppingCartManager = shoppingCartManager;
         }
 
         public void LoadProducts()
@@ -34,13 +37,23 @@ namespace Marketplace
                 ProductId = product.Id.ToString(),
                 ProductName = product.Name,
                 ProductPrice = product.Price.ToString(),
-                ProductDescription = product.Description
+                ProductDescription = product.Description,
+                Quantity = product.Quantity
+                
             };
 
             if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath))
             {
                 productItem.ProductImage = Image.FromFile(product.ImagePath);
             }
+
+            productItem.SetCartManager(_shoppingCartManager);
+            productItem.ProductAddedToCart += (s, e) =>
+            {
+                var form = Application.OpenForms.OfType<Form1>().FirstOrDefault();
+                form?.UpdateCartUI();
+            };
+
             _productPanel.Controls.Add(productItem);
         }
 
@@ -62,6 +75,9 @@ namespace Marketplace
                 case "За ціною (спадання)":
                     products = products.OrderByDescending(p => Convert.ToDecimal(p.Price)).ToList();
                     break;
+                case "За наявністю":
+                    products = products.OrderByDescending(p => Convert.ToDecimal(p.Quantity)).ToList();
+                    break;
             }
 
             UpdateProductList(products);
@@ -76,5 +92,6 @@ namespace Marketplace
                 AddProductToUI(product);
             }
         }
+
     }
 }

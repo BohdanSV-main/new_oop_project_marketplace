@@ -7,11 +7,14 @@ namespace Marketplace
     {
         private readonly TabControl _mainFrame;
         private readonly TabPage _addProductPage;
+        private readonly TabPage _pageShoppingList;
+        private readonly TabPage _pageStorage;
 
-        public UserManager(TabControl mainFrame, TabPage addProductPage)
+        public UserManager(TabControl mainFrame, TabPage addProductPage, TabPage pageShoppingList)
         {
             _mainFrame = mainFrame;
             _addProductPage = addProductPage;
+            _pageShoppingList = pageShoppingList;
         }
 
 
@@ -27,12 +30,14 @@ namespace Marketplace
             if (!SessionManager.CurrentUser.IsAdmin)
             {
                 _mainFrame.TabPages.Remove(_addProductPage);
+                _mainFrame.TabPages.Remove(_pageStorage);
             }
             else
             {
                 if (!_mainFrame.TabPages.Contains(_addProductPage))
                 {
                     _mainFrame.TabPages.Add(_addProductPage);
+                    _mainFrame.TabPages.Add(_pageStorage);
                 }
             }
         }

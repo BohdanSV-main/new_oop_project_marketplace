@@ -2,8 +2,8 @@
 {
     public class Product : BaseProduct
     {
-        public Product(int id, string name, string price, string description, string imagePath) : 
-            base(id, name, price, description, imagePath)
+        public Product(int id, string name, string price, string description, string imagePath, int quantity) : 
+            base(id, name, price, description, imagePath, quantity)
         {
         }
         public override string GetProductInfo()

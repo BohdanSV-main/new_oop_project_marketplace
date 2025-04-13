@@ -37,6 +37,9 @@
             addProductPage = new TabPage();
             btnOpenRemoveForm = new Button();
             addProduct = new Button();
+            pageShoppingList = new TabPage();
+            cartPanel = new FlowLayoutPanel();
+            ConfirmOrderButton = new Button();
             panel1 = new Panel();
             marketName = new Label();
             btnUser = new Button();
@@ -45,6 +48,7 @@
             mainFrame.SuspendLayout();
             mainPage.SuspendLayout();
             addProductPage.SuspendLayout();
+            pageShoppingList.SuspendLayout();
             panel1.SuspendLayout();
             userMenu.SuspendLayout();
             SuspendLayout();
@@ -53,6 +57,7 @@
             // 
             mainFrame.Controls.Add(mainPage);
             mainFrame.Controls.Add(addProductPage);
+            mainFrame.Controls.Add(pageShoppingList);
             mainFrame.Location = new Point(12, 65);
             mainFrame.Name = "mainFrame";
             mainFrame.SelectedIndex = 0;
@@ -127,6 +132,38 @@
             addProduct.UseVisualStyleBackColor = false;
             addProduct.Click += addProduct_Click;
             // 
+            // pageShoppingList
+            // 
+            pageShoppingList.BackColor = Color.FromArgb(224, 224, 224);
+            pageShoppingList.Controls.Add(cartPanel);
+            pageShoppingList.Controls.Add(ConfirmOrderButton);
+            pageShoppingList.Location = new Point(4, 24);
+            pageShoppingList.Name = "pageShoppingList";
+            pageShoppingList.Padding = new Padding(3);
+            pageShoppingList.Size = new Size(1413, 699);
+            pageShoppingList.TabIndex = 2;
+            pageShoppingList.Text = "Список покупок";
+            // 
+            // cartPanel
+            // 
+            cartPanel.AutoScroll = true;
+            cartPanel.FlowDirection = FlowDirection.TopDown;
+            cartPanel.Location = new Point(63, 24);
+            cartPanel.Name = "cartPanel";
+            cartPanel.Size = new Size(971, 316);
+            cartPanel.TabIndex = 2;
+            cartPanel.WrapContents = false;
+            // 
+            // ConfirmOrderButton
+            // 
+            ConfirmOrderButton.Location = new Point(97, 604);
+            ConfirmOrderButton.Name = "ConfirmOrderButton";
+            ConfirmOrderButton.Size = new Size(459, 52);
+            ConfirmOrderButton.TabIndex = 1;
+            ConfirmOrderButton.Text = "Підтвердити замовлення";
+            ConfirmOrderButton.UseVisualStyleBackColor = true;
+            ConfirmOrderButton.Click += ConfirmOrderButton_Click;
+            // 
             // panel1
             // 
             panel1.BackColor = SystemColors.MenuHighlight;
@@ -193,6 +230,7 @@
             mainFrame.ResumeLayout(false);
             mainPage.ResumeLayout(false);
             addProductPage.ResumeLayout(false);
+            pageShoppingList.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             userMenu.ResumeLayout(false);
@@ -213,5 +251,8 @@
         private ContextMenuStrip userMenu;
         private ToolStripMenuItem menuItemLogout;
         private ComboBox comboBoxSort;
+        private TabPage pageShoppingList;
+        private Button ConfirmOrderButton;
+        private FlowLayoutPanel cartPanel;
     }
 }
