@@ -9,7 +9,7 @@ namespace Marketplace
     public class CartItem : IIdentifiable
     {
         public int Id { get; set; }
-        public int UserId { get; set; } // Для зв’язку з користувачем
+        public int UserId { get; set; }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }

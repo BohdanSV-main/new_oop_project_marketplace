@@ -8,4 +8,6 @@ public interface IDataStorage<T> where T : class
     T? GetById(int id);
     List<T> GetAll();
     void Save();
+    void SaveAll(List<T> items);
+
 }

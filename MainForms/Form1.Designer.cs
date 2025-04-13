@@ -38,14 +38,13 @@
             btnOpenRemoveForm = new Button();
             addProduct = new Button();
             pageShoppingList = new TabPage();
+            cartPanel = new FlowLayoutPanel();
             ConfirmOrderButton = new Button();
-            pageSoldList = new TabPage();
             panel1 = new Panel();
             marketName = new Label();
             btnUser = new Button();
             userMenu = new ContextMenuStrip(components);
             menuItemLogout = new ToolStripMenuItem();
-            cartPanel = new FlowLayoutPanel();
             mainFrame.SuspendLayout();
             mainPage.SuspendLayout();
             addProductPage.SuspendLayout();
@@ -59,7 +58,6 @@
             mainFrame.Controls.Add(mainPage);
             mainFrame.Controls.Add(addProductPage);
             mainFrame.Controls.Add(pageShoppingList);
-            mainFrame.Controls.Add(pageSoldList);
             mainFrame.Location = new Point(12, 65);
             mainFrame.Name = "mainFrame";
             mainFrame.SelectedIndex = 0;
@@ -146,6 +144,16 @@
             pageShoppingList.TabIndex = 2;
             pageShoppingList.Text = "Список покупок";
             // 
+            // cartPanel
+            // 
+            cartPanel.AutoScroll = true;
+            cartPanel.FlowDirection = FlowDirection.TopDown;
+            cartPanel.Location = new Point(63, 24);
+            cartPanel.Name = "cartPanel";
+            cartPanel.Size = new Size(971, 316);
+            cartPanel.TabIndex = 2;
+            cartPanel.WrapContents = false;
+            // 
             // ConfirmOrderButton
             // 
             ConfirmOrderButton.Location = new Point(97, 604);
@@ -155,16 +163,6 @@
             ConfirmOrderButton.Text = "Підтвердити замовлення";
             ConfirmOrderButton.UseVisualStyleBackColor = true;
             ConfirmOrderButton.Click += ConfirmOrderButton_Click;
-            // 
-            // pageSoldList
-            // 
-            pageSoldList.BackColor = Color.FromArgb(224, 224, 224);
-            pageSoldList.Location = new Point(4, 24);
-            pageSoldList.Name = "pageSoldList";
-            pageSoldList.Padding = new Padding(3);
-            pageSoldList.Size = new Size(1413, 699);
-            pageSoldList.TabIndex = 3;
-            pageSoldList.Text = "Проданий товар";
             // 
             // panel1
             // 
@@ -216,16 +214,6 @@
             menuItemLogout.Text = "Вийти";
             menuItemLogout.Click += menuItemLogout_Click;
             // 
-            // cartPanel
-            // 
-            cartPanel.AutoScroll = true;
-            cartPanel.FlowDirection = FlowDirection.TopDown;
-            cartPanel.Location = new Point(63, 24);
-            cartPanel.Name = "cartPanel";
-            cartPanel.Size = new Size(971, 316);
-            cartPanel.TabIndex = 2;
-            cartPanel.WrapContents = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -264,7 +252,6 @@
         private ToolStripMenuItem menuItemLogout;
         private ComboBox comboBoxSort;
         private TabPage pageShoppingList;
-        private TabPage pageSoldList;
         private Button ConfirmOrderButton;
         private FlowLayoutPanel cartPanel;
     }

@@ -15,6 +15,8 @@ namespace Marketplace
         private TextBox txtImagePath;
         private PictureBox pictureBoxPreview;
         private Button btnSelectImage;
+        private Label Quan;
+        private NumericUpDown numericQuantity;
         private Button btnSave;
 
         public AddProductForm()
@@ -32,7 +34,10 @@ namespace Marketplace
             pictureBoxPreview = new PictureBox();
             btnSelectImage = new Button();
             btnSave = new Button();
+            Quan = new Label();
+            numericQuantity = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBoxPreview).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericQuantity).BeginInit();
             SuspendLayout();
             // 
             // txtName
@@ -97,9 +102,27 @@ namespace Marketplace
             btnSave.Text = "Зберегти";
             btnSave.Click += btnSave_Click;
             // 
+            // Quan
+            // 
+            Quan.AutoSize = true;
+            Quan.Location = new Point(126, 225);
+            Quan.Name = "Quan";
+            Quan.Size = new Size(59, 15);
+            Quan.TabIndex = 7;
+            Quan.Text = "Кількість:";
+            // 
+            // numericQuantity
+            // 
+            numericQuantity.Location = new Point(191, 225);
+            numericQuantity.Name = "numericQuantity";
+            numericQuantity.Size = new Size(120, 23);
+            numericQuantity.TabIndex = 8;
+            // 
             // AddProductForm
             // 
             ClientSize = new Size(334, 381);
+            Controls.Add(numericQuantity);
+            Controls.Add(Quan);
             Controls.Add(txtName);
             Controls.Add(txtPrice);
             Controls.Add(txtDescription);
@@ -111,6 +134,7 @@ namespace Marketplace
             Name = "AddProductForm";
             Text = "Додати товар";
             ((System.ComponentModel.ISupportInitialize)pictureBoxPreview).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericQuantity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,7 +167,8 @@ namespace Marketplace
                 txtName.Text,
                 txtPrice.Text,
                 txtDescription.Text,
-                txtImagePath.Text
+                txtImagePath.Text,
+                (int)numericQuantity.Value
             );
 
             this.DialogResult = DialogResult.OK;

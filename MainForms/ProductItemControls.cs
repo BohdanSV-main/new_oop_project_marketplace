@@ -36,6 +36,16 @@ namespace Marketplace
             get => lblId.Text;
             set => lblId.Text = "ID: " + value;
         }
+        public int Quantity
+        {
+            get
+            {
+                var text = lblQuantity.Text.Replace("Кількість: ", "");
+                return int.TryParse(text, out var result) ? result : 0;
+            }
+            set => lblQuantity.Text = $"Кількість: {value}";
+        }
+
 
         public ProductItemControl()
         {
@@ -47,6 +57,7 @@ namespace Marketplace
         private Label lblId;
         private Button addToCartButton;
         private PictureBox pictureBox;
+        private Label lblQuantity;
         private ShoppingCartManager _shoppingCartManager;
         public event EventHandler ProductAddedToCart;
 
@@ -58,6 +69,7 @@ namespace Marketplace
             lblDescription = new Label();
             lblId = new Label();
             addToCartButton = new Button();
+            lblQuantity = new Label();
             ((ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -123,9 +135,19 @@ namespace Marketplace
             addToCartButton.UseVisualStyleBackColor = false;
             addToCartButton.Click += addToCartButton_Click;
             // 
+            // lblQuantity
+            // 
+            lblQuantity.AutoSize = true;
+            lblQuantity.Location = new Point(125, 6);
+            lblQuantity.Name = "lblQuantity";
+            lblQuantity.Size = new Size(53, 15);
+            lblQuantity.TabIndex = 7;
+            lblQuantity.Text = "Quantity";
+            // 
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            Controls.Add(lblQuantity);
             Controls.Add(addToCartButton);
             Controls.Add(lblId);
             Controls.Add(lblDescription);
@@ -141,6 +163,7 @@ namespace Marketplace
             ResumeLayout(false);
             PerformLayout();
         }
+
         public void SetCartManager(ShoppingCartManager cartManager)
         {
             _shoppingCartManager = cartManager;
@@ -153,7 +176,15 @@ namespace Marketplace
 
         private void addToCartButton_Click(object sender, EventArgs e)
         {
-            if (SessionManager.CurrentUser == null || SessionManager.CurrentUser.IsAdmin) return;
+            if(Quantity < 0) {
+                MessageBox.Show("Товар закінчився");
+                return;
+            }
+            if (SessionManager.CurrentUser == null || SessionManager.CurrentUser.IsAdmin)
+            {
+                MessageBox.Show("Тільки покупець може купляти");
+                return;
+            }
 
             if (_shoppingCartManager == null)
             {
@@ -166,12 +197,17 @@ namespace Marketplace
                 ProductName,
                 ProductPrice.Replace("Ціна: ", "").Replace(" грн", ""),
                 ProductDescription,
-                null // Якщо немає шляху до картинки
+                null,
+                Quantity
             );
+
 
             _shoppingCartManager.AddToCart(product);
             MessageBox.Show("Товар додано в корзину");
             ProductAddedToCart?.Invoke(this, EventArgs.Empty);
         }
+
+
     }
+
 }

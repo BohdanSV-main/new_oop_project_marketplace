@@ -9,8 +9,6 @@ namespace new_oop_marketplace
         private ProductRepository _productRepository;
         private UserRepository _userRepository;
         private ShoppingCartManager _shoppingCartManager;
-        // Removed duplicate declaration of cartPanel
-        // public Panel cartPanel;
 
         public Form1()
         {
@@ -22,10 +20,11 @@ namespace new_oop_marketplace
 
             var cartStorage = new JsonStorage<CartItem>("shopping_cart.json");
             var cartRepository = new ShoppingCartRepository(cartStorage);
-            _shoppingCartManager = new ShoppingCartManager(cartRepository);
+            _shoppingCartManager = new ShoppingCartManager(cartRepository, _productRepository);
+
 
             _productManager = new ProductManager(_productRepository, flowLayoutPanelProducts, _shoppingCartManager);
-            _userManager = new UserManager(mainFrame, addProductPage);
+            _userManager = new UserManager(mainFrame, addProductPage, pageShoppingList);
 
             _productManager.LoadProducts();
             _userManager.CheckUserAccess();
@@ -116,14 +115,27 @@ namespace new_oop_marketplace
             }
         }
 
+
+
         public void UpdateCartUI()
         {
             DisplayCartItems(cartPanel);
         }
         private void ConfirmOrderButton_Click(object sender, EventArgs e)
         {
+            if (SessionManager.CurrentUser == null || SessionManager.CurrentUser.IsAdmin)
+            {
+                MessageBox.Show("Тільки покупець може підтверджувати замовлення");
+                return;
+            }
+            if (_shoppingCartManager.GetUserCart().Count == 0)
+            {
+                MessageBox.Show("Ваш кошик порожній!");
+                return;
+            }
             _shoppingCartManager.ConfirmOrder();
             UpdateCartUI();
+            _productManager.LoadProducts();
             MessageBox.Show("Замовлення підтверджено!");
         }
     }

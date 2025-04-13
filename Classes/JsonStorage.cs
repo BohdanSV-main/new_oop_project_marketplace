@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using static System.Windows.Forms.Design.AxImporter;
 
 namespace Marketplace
 {
@@ -62,6 +63,10 @@ namespace Marketplace
             return string.IsNullOrWhiteSpace(json)
                 ? new List<T>()
                 : JsonSerializer.Deserialize<List<T>>(json, _jsonOptions) ?? new List<T>();
+        }
+        public void SaveAll(List<T> items)
+        {
+            File.WriteAllText(_filePath, JsonSerializer.Serialize(items, _jsonOptions));
         }
     }
 }

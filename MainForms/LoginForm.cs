@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using BCrypt.Net;
 using Marketplace;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace new_oop_marketplace
 {
@@ -126,6 +127,7 @@ namespace new_oop_marketplace
 
             if (success && !isRegisterMode)
             {
+
                 this.Hide();
                 using (Form1 mainForm = new Form1())
                 {

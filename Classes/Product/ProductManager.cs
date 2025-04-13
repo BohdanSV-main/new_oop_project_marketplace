@@ -37,7 +37,9 @@ namespace Marketplace
                 ProductId = product.Id.ToString(),
                 ProductName = product.Name,
                 ProductPrice = product.Price.ToString(),
-                ProductDescription = product.Description
+                ProductDescription = product.Description,
+                Quantity = product.Quantity
+                
             };
 
             if (!string.IsNullOrEmpty(product.ImagePath) && File.Exists(product.ImagePath))
@@ -73,6 +75,9 @@ namespace Marketplace
                 case "За ціною (спадання)":
                     products = products.OrderByDescending(p => Convert.ToDecimal(p.Price)).ToList();
                     break;
+                case "За наявністю":
+                    products = products.OrderByDescending(p => Convert.ToDecimal(p.Quantity)).ToList();
+                    break;
             }
 
             UpdateProductList(products);
@@ -87,5 +92,6 @@ namespace Marketplace
                 AddProductToUI(product);
             }
         }
+
     }
 }
