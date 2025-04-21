@@ -18,7 +18,7 @@ namespace new_oop_marketplace
             _productRepository = new ProductRepository(productStorage);
             _userRepository = new UserRepository(userStorage);
 
-            var cartStorage = new JsonStorage<CartItem>("shopping_cart.json");
+            var cartStorage = new InMemoryStorage<CartItem>();
             var cartRepository = new ShoppingCartRepository(cartStorage);
             _shoppingCartManager = new ShoppingCartManager(cartRepository, _productRepository);
 
@@ -29,6 +29,8 @@ namespace new_oop_marketplace
             _productManager.LoadProducts();
             _userManager.CheckUserAccess();
         }
+
+
 
         private void mainFrame_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -104,7 +106,7 @@ namespace new_oop_marketplace
             {
                 Label label = new Label
                 {
-                    Text = $"{item.ProductName} - {item.ProductPrice} דנם",
+                    Text = $"{item.ProductName} - {item.ProductPrice} דנם ץ {item.Quantity} רע.",
                     AutoSize = true,
                     Font = new Font("Segoe UI", 10),
                     Padding = new Padding(5),

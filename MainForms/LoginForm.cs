@@ -112,22 +112,26 @@ namespace new_oop_marketplace
 
         private void btnAction_Click(object sender, EventArgs e)
         {
-            string login = txtLogin.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            var loginModel = new Marketplace.User(
+                0,
+                txtLogin.Text.Trim(),
+                txtPassword.Text.Trim(),
+                false
+            );
 
-            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+            var validationErrors = _loginService.ValidateLoginModel(loginModel);
+            if (validationErrors.Count > 0)
             {
-                MessageBox.Show("Заповніть всі поля!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Join("\n", validationErrors), "Помилка валідації", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            bool success = isRegisterMode ?
-                _loginService.RegisterUser(login, password) :
-                _loginService.LoginUser(login, password);
+            bool success = isRegisterMode
+                ? _loginService.RegisterUser(loginModel.Login, loginModel.Password)
+                : _loginService.LoginUser(loginModel.Login, loginModel.Password);
 
             if (success && !isRegisterMode)
             {
-
                 this.Hide();
                 using (Form1 mainForm = new Form1())
                 {
@@ -144,6 +148,7 @@ namespace new_oop_marketplace
                 MessageBox.Show("Невірний логін або пароль!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void SwitchMode()
         {

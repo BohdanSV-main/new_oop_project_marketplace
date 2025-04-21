@@ -162,7 +162,7 @@ namespace Marketplace
             }
             int newId = Product.GenerateId();
 
-            NewProduct = new Product(
+            var product = new Product(
                 newId,
                 txtName.Text,
                 txtPrice.Text,
@@ -171,8 +171,23 @@ namespace Marketplace
                 (int)numericQuantity.Value
             );
 
+            var context = new System.ComponentModel.DataAnnotations.ValidationContext(product, null, null);
+            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+
+            bool isValid = System.ComponentModel.DataAnnotations.Validator.TryValidateObject(product, context, results, true);
+
+            if (!isValid)
+            {
+                string errors = string.Join("\n", results.Select(r => r.ErrorMessage));
+                MessageBox.Show(errors, "Помилка валідації", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            NewProduct = product;
             this.DialogResult = DialogResult.OK;
+            this.Close();
         }
+
+
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {

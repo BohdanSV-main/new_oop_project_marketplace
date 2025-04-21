@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Text.Json;
 using static System.Windows.Forms.Design.AxImporter;
@@ -16,6 +17,18 @@ namespace Marketplace
 
         private List<T> _entities;
 
+        public void ValidateEntity(T entity)
+        {
+            var validationResults = new List<ValidationResult>();
+            var context = new ValidationContext(entity);
+
+            if (!Validator.TryValidateObject(entity, context, validationResults, true))
+            {
+                var errors = string.Join("\n", validationResults.Select(v => v.ErrorMessage));
+                throw new ValidationException($"Помилка валідації:\n{errors}");
+            }
+        }
+
         public JsonStorage(string filePath)
         {
             _filePath = filePath;
@@ -25,6 +38,7 @@ namespace Marketplace
         public void Add(T entity)
         {
             _entities.Add(entity);
+            ValidateEntity(entity);
             Save();
         }
 
@@ -60,6 +74,10 @@ namespace Marketplace
                 return new List<T>();
 
             var json = File.ReadAllText(_filePath);
+            var options = new JsonSerializerOptions
+            {
+                IncludeFields = true
+            };
             return string.IsNullOrWhiteSpace(json)
                 ? new List<T>()
                 : JsonSerializer.Deserialize<List<T>>(json, _jsonOptions) ?? new List<T>();

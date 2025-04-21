@@ -2,6 +2,7 @@
 using Marketplace;
 using BCrypt.Net;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.ComponentModel.DataAnnotations;
 
 namespace Marketplace
 {
@@ -12,6 +13,23 @@ namespace Marketplace
         public LoginService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
+        }
+
+        public List<string> ValidateLoginModel(User model)
+        {
+            var context = new ValidationContext(model);
+            var results = new List<ValidationResult>();
+            var errors = new List<string>();
+
+            if (!Validator.TryValidateObject(model, context, results, true))
+            {
+                foreach (var validationResult in results)
+                {
+                    errors.Add(validationResult.ErrorMessage);
+                }
+            }
+
+            return errors;
         }
 
         public bool LoginUser(string login, string password)

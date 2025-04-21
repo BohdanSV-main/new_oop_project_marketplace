@@ -20,8 +20,7 @@ namespace Marketplace
 
         public void CheckUserAccess()
         {
-
-            if (SessionManager.CurrentUser == null)// don`t touch. Idk but work
+            if (SessionManager.CurrentUser == null)
             {
                 MessageBox.Show("Помилка: користувач не знайдений!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -29,18 +28,20 @@ namespace Marketplace
 
             if (!SessionManager.CurrentUser.IsAdmin)
             {
-                _mainFrame.TabPages.Remove(_addProductPage);
-                _mainFrame.TabPages.Remove(_pageStorage);
+                if (_addProductPage != null)
+                {
+                    _mainFrame.TabPages.Remove(_addProductPage);
+                }
             }
             else
             {
-                if (!_mainFrame.TabPages.Contains(_addProductPage))
+                if (!_mainFrame.TabPages.Contains(_addProductPage) && _addProductPage != null)
                 {
                     _mainFrame.TabPages.Add(_addProductPage);
-                    _mainFrame.TabPages.Add(_pageStorage);
                 }
             }
         }
+
 
     }
 }

@@ -58,6 +58,7 @@ namespace Marketplace
         private Button addToCartButton;
         private PictureBox pictureBox;
         private Label lblQuantity;
+        private NumericUpDown numericQuantity;
         private ShoppingCartManager _shoppingCartManager;
         public event EventHandler ProductAddedToCart;
 
@@ -70,14 +71,16 @@ namespace Marketplace
             lblId = new Label();
             addToCartButton = new Button();
             lblQuantity = new Label();
+            numericQuantity = new NumericUpDown();
             ((ISupportInitialize)pictureBox).BeginInit();
+            ((ISupportInitialize)numericQuantity).BeginInit();
             SuspendLayout();
             // 
             // pictureBox
             // 
             pictureBox.Location = new Point(0, 28);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(244, 132);
+            pictureBox.Size = new Size(277, 151);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.TabIndex = 1;
             pictureBox.TabStop = false;
@@ -86,7 +89,7 @@ namespace Marketplace
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 12F);
-            lblName.Location = new Point(4, 163);
+            lblName.Location = new Point(3, 182);
             lblName.Name = "lblName";
             lblName.Size = new Size(36, 21);
             lblName.TabIndex = 2;
@@ -96,7 +99,7 @@ namespace Marketplace
             // 
             lblPrice.AutoSize = true;
             lblPrice.Font = new Font("Segoe UI", 12F);
-            lblPrice.Location = new Point(4, 203);
+            lblPrice.Location = new Point(3, 222);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(44, 21);
             lblPrice.TabIndex = 3;
@@ -107,7 +110,8 @@ namespace Marketplace
             // 
             lblDescription.AutoEllipsis = true;
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(4, 235);
+            lblDescription.Location = new Point(3, 254);
+            lblDescription.MaximumSize = new Size(0, 250);
             lblDescription.Name = "lblDescription";
             lblDescription.Size = new Size(67, 15);
             lblDescription.TabIndex = 4;
@@ -128,7 +132,7 @@ namespace Marketplace
             addToCartButton.BackColor = Color.FromArgb(128, 255, 128);
             addToCartButton.BackgroundImage = new_oop_marketplace.Properties.Resources.shopping_cart;
             addToCartButton.BackgroundImageLayout = ImageLayout.Stretch;
-            addToCartButton.Location = new Point(220, 2);
+            addToCartButton.Location = new Point(253, 3);
             addToCartButton.Name = "addToCartButton";
             addToCartButton.Size = new Size(24, 23);
             addToCartButton.TabIndex = 6;
@@ -138,15 +142,26 @@ namespace Marketplace
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(125, 6);
+            lblQuantity.Location = new Point(137, 7);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(53, 15);
             lblQuantity.TabIndex = 7;
             lblQuantity.Text = "Quantity";
             // 
+            // numericQuantity
+            // 
+            numericQuantity.Location = new Point(219, 2);
+            numericQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericQuantity.Name = "numericQuantity";
+            numericQuantity.Size = new Size(28, 23);
+            numericQuantity.TabIndex = 8;
+            numericQuantity.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericQuantity.ValueChanged += numericQuantity_ValueChanged;
+            // 
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            Controls.Add(numericQuantity);
             Controls.Add(lblQuantity);
             Controls.Add(addToCartButton);
             Controls.Add(lblId);
@@ -158,8 +173,9 @@ namespace Marketplace
             ForeColor = Color.Black;
             Margin = new Padding(15);
             Name = "ProductItemControl";
-            Size = new Size(254, 281);
+            Size = new Size(280, 300);
             ((ISupportInitialize)pictureBox).EndInit();
+            ((ISupportInitialize)numericQuantity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,7 +192,8 @@ namespace Marketplace
 
         private void addToCartButton_Click(object sender, EventArgs e)
         {
-            if(Quantity < 0) {
+            if (Quantity <= 0)
+            {
                 MessageBox.Show("Товар закінчився");
                 return;
             }
@@ -201,13 +218,17 @@ namespace Marketplace
                 Quantity
             );
 
-
-            _shoppingCartManager.AddToCart(product);
-            MessageBox.Show("Товар додано в корзину");
+            int quantity = (int)numericQuantity.Value;
+            MessageBox.Show($"Ви вибрали {quantity} шт.");
+            _shoppingCartManager.AddToCart(product, quantity);
             ProductAddedToCart?.Invoke(this, EventArgs.Empty);
+
         }
 
+        private void numericQuantity_ValueChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }
