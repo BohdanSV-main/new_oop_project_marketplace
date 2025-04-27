@@ -4,24 +4,20 @@ namespace new_oop_marketplace
 {
     public partial class Form1 : Form
     {
-        private ProductManager _productManager;
-        private UserManager _userManager;
-        private ProductRepository _productRepository;
-        private UserRepository _userRepository;
+        private IProductRepository _productRepository;
+        private IUserRepository _userRepository;
         private ShoppingCartManager _shoppingCartManager;
 
-        public Form1()
+        private ProductManager _productManager;
+        private UserManager _userManager;
+
+        public Form1(IProductRepository productRepository, IUserRepository userRepository, ShoppingCartManager shoppingCartManager)
         {
             InitializeComponent();
-            IDataStorage<Product> productStorage = new JsonStorage<Product>("products.json");
-            IDataStorage<User> userStorage = new JsonStorage<User>("users.json");
-            _productRepository = new ProductRepository(productStorage);
-            _userRepository = new UserRepository(userStorage);
 
-            var cartStorage = new InMemoryStorage<CartItem>();
-            var cartRepository = new ShoppingCartRepository(cartStorage);
-            _shoppingCartManager = new ShoppingCartManager(cartRepository, _productRepository);
-
+            _productRepository = productRepository;
+            _userRepository = userRepository;
+            _shoppingCartManager = shoppingCartManager;
 
             _productManager = new ProductManager(_productRepository, flowLayoutPanelProducts, _shoppingCartManager);
             _userManager = new UserManager(mainFrame, addProductPage, pageShoppingList);
@@ -29,7 +25,6 @@ namespace new_oop_marketplace
             _productManager.LoadProducts();
             _userManager.CheckUserAccess();
         }
-
 
 
         private void mainFrame_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,9 +60,10 @@ namespace new_oop_marketplace
 
         private void btnOpenRemoveForm_Click(object sender, EventArgs e)
         {
-            RemoveProductForm removeForm = new RemoveProductForm(_productRepository.GetStorage());
-            removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
-            removeForm.ShowDialog();
+
+                RemoveProductForm removeForm = new RemoveProductForm(_productRepository);
+                removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
+                removeForm.ShowDialog();
         }
         private void btnUser_Click(object sender, EventArgs e)
         {
@@ -78,7 +74,7 @@ namespace new_oop_marketplace
         {
             SessionManager.Logout();
 
-            LoginForm loginForm = new LoginForm(_userRepository);
+            LoginForm loginForm = new LoginForm(_userRepository, _productRepository, _shoppingCartManager);
 
             this.Hide();
             loginForm.ShowDialog();

@@ -7,13 +7,13 @@ namespace Marketplace
 {
     public partial class RemoveProductForm : Form
     {
-        private readonly IDataStorage<Product> _storage;
+        private readonly IProductRepository _productRepository;
         public event EventHandler<Product> OnProductRemoved;
 
-        public RemoveProductForm(IDataStorage<Product> storage)
+        public RemoveProductForm(IProductRepository productRepository)
         {
             InitializeComponent();
-            _storage = storage;
+            _productRepository = productRepository;
             LoadProductNames();
         }
 
@@ -55,11 +55,13 @@ namespace Marketplace
 
         private void LoadProductNames()
         {
-            ComboBox cmbProducts = this.Controls.Find("cmbProducts", true).FirstOrDefault() as ComboBox;
-            if (cmbProducts == null) return;
-
             cmbProducts.Items.Clear();
-            List<Product> products = _storage.GetAll();
+            List<Product> products = _productRepository.GetAll();
+            if (products == null)
+            {
+                MessageBox.Show("No products found or failed to load products.");
+                return;
+            }
             foreach (var product in products)
             {
                 cmbProducts.Items.Add(product.Name);
@@ -67,7 +69,7 @@ namespace Marketplace
 
             if (cmbProducts.Items.Count > 0)
             {
-                cmbProducts.SelectedIndex = 0;
+                cmbProducts.SelectedIndex = 0; // Вибір першого продукту
             }
         }
 
@@ -77,13 +79,17 @@ namespace Marketplace
             if (cmbProducts == null || cmbProducts.SelectedItem == null) return;
 
             string selectedProductName = cmbProducts.SelectedItem.ToString();
-            Product productToRemove = _storage.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
+
+            Product productToRemove = _productRepository.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
 
             if (productToRemove != null)
             {
-                _storage.Delete(productToRemove.Id);
+                _productRepository.Delete(productToRemove.Id);
+
                 OnProductRemoved?.Invoke(this, productToRemove);
+
                 MessageBox.Show($"Товар \"{selectedProductName}\" видалено!", "Успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 LoadProductNames();
             }
             else
@@ -91,6 +97,7 @@ namespace Marketplace
                 MessageBox.Show("Товар не знайдено!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
         private ComboBox cmbProducts;
         private Button btnRemove;
     }

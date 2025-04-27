@@ -10,11 +10,11 @@ namespace Marketplace
 {
     public class ProductManager
     {
-        private readonly ProductRepository _productRepository;
+        private readonly IProductRepository _productRepository;
         private ShoppingCartManager _shoppingCartManager;
         private FlowLayoutPanel _productPanel;
 
-        public ProductManager(ProductRepository productRepository, FlowLayoutPanel productPanel, ShoppingCartManager shoppingCartManager)
+        public ProductManager(IProductRepository productRepository, FlowLayoutPanel productPanel, ShoppingCartManager shoppingCartManager)
         {
             _productRepository = productRepository;
             _productPanel = productPanel;
@@ -24,7 +24,7 @@ namespace Marketplace
         public void LoadProducts()
         {
             _productPanel.Controls.Clear();
-            foreach (var product in _productRepository.GetAllProducts())
+            foreach (var product in _productRepository.GetAll())
             {
                 AddProductToUI(product);
             }
@@ -59,7 +59,7 @@ namespace Marketplace
 
         public void SortProducts(string selectedSort)
         {
-            var products = _productRepository.GetAllProducts();
+            var products = _productRepository.GetAll();
 
             switch (selectedSort)
             {

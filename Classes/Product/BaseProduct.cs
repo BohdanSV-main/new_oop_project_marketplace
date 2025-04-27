@@ -15,7 +15,7 @@ public abstract class BaseProduct : IIdentifiable
     public string Description { get; set; }
     [Required(ErrorMessage = "Шлях до зображення обов’язковий")]
     public string ImagePath { get; set; }
-    [Required(ErrorMessage = "Кількість обов’язкова"), Range(1, 1000, ErrorMessage = "Кількість повинно бути числом від 1 до 1000")]
+    [Required(ErrorMessage = "Кількість обов’язкова"), Range(1, 100, ErrorMessage = "Кількість повинно бути числом від 1 до 1000")]
     public int Quantity { get; set; }
 
     public BaseProduct(int id, string name, string price, string description, string imagePath, int quantity)

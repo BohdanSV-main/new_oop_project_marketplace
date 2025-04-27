@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
     public class ShoppingCartManager
     {
         private readonly ShoppingCartRepository _cartRepository;
-        private readonly ProductRepository _productRepository;
+        private readonly IProductRepository _productRepository;
 
-        public ShoppingCartManager(ShoppingCartRepository cartRepository, ProductRepository productRepository)
+    public ShoppingCartManager(ShoppingCartRepository cartRepository, IProductRepository productRepository)
         {
             _cartRepository = cartRepository;
             _cartRepository = cartRepository;
@@ -23,6 +23,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
     public void AddToCart(Product product, int quantity)
     {
+        if (product == null)
+        {
+            MessageBox.Show("Product is null!");
+            return;
+        }
         var user = SessionManager.CurrentUser;
         if (user == null || user.IsAdmin) return;
 
@@ -70,11 +75,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
             foreach (var item in userItems)
             {
-                var product = _productRepository.GetAllProducts().FirstOrDefault(p => p.Id == item.ProductId);
+                var product = _productRepository.GetAll().FirstOrDefault(p => p.Id == item.ProductId);
                 if (product != null && product.Quantity >= item.Quantity)
                 {
                     product.Quantity -= item.Quantity;
-                    _productRepository.UpdateProduct(product);
+                    _productRepository.Update(product);
                 }
                 _cartRepository.Delete(item.Id);
 
