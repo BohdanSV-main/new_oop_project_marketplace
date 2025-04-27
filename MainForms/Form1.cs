@@ -60,9 +60,10 @@ namespace new_oop_marketplace
 
         private void btnOpenRemoveForm_Click(object sender, EventArgs e)
         {
-            RemoveProductForm removeForm = new RemoveProductForm(_productRepository.GetStorage());
-            removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
-            removeForm.ShowDialog();
+
+                RemoveProductForm removeForm = new RemoveProductForm(_productRepository);
+                removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
+                removeForm.ShowDialog();
         }
         private void btnUser_Click(object sender, EventArgs e)
         {

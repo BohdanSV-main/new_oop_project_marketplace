@@ -7,13 +7,13 @@ namespace Marketplace
 {
     public partial class RemoveProductForm : Form
     {
-        private readonly IDataStorage<Product> _storage;
+        private readonly IProductRepository _productRepository;
         public event EventHandler<Product> OnProductRemoved;
 
-        public RemoveProductForm(IDataStorage<Product> storage)
+        public RemoveProductForm(IProductRepository productRepository)
         {
             InitializeComponent();
-            _storage = storage;
+            _productRepository = productRepository;
             LoadProductNames();
         }
 
@@ -56,7 +56,12 @@ namespace Marketplace
         private void LoadProductNames()
         {
             cmbProducts.Items.Clear();
-            List<Product> products = _storage.GetAll(); // Отримуємо всі продукти з бази даних
+            List<Product> products = _productRepository.GetAll();
+            if (products == null)
+            {
+                MessageBox.Show("No products found or failed to load products.");
+                return;
+            }
             foreach (var product in products)
             {
                 cmbProducts.Items.Add(product.Name);
@@ -73,29 +78,22 @@ namespace Marketplace
             ComboBox cmbProducts = this.Controls.Find("cmbProducts", true).FirstOrDefault() as ComboBox;
             if (cmbProducts == null || cmbProducts.SelectedItem == null) return;
 
-            // Отримуємо назву вибраного продукту
             string selectedProductName = cmbProducts.SelectedItem.ToString();
 
-            // Шукаємо продукт за назвою в репозиторії
-            Product productToRemove = _storage.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
+            Product productToRemove = _productRepository.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
 
             if (productToRemove != null)
             {
-                // Видаляємо продукт з бази даних через MySqlProductRepository
-                _storage.Delete(productToRemove.Id);
+                _productRepository.Delete(productToRemove.Id);
 
-                // Викликаємо подію, щоб оновити інтерфейс або інші форми
                 OnProductRemoved?.Invoke(this, productToRemove);
 
-                // Сповіщаємо користувача
                 MessageBox.Show($"Товар \"{selectedProductName}\" видалено!", "Успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Оновлюємо список продуктів у ComboBox
                 LoadProductNames();
             }
             else
             {
-                // Якщо продукт не знайдено, виводимо повідомлення
                 MessageBox.Show("Товар не знайдено!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

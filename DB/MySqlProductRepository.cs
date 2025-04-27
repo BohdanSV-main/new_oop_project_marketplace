@@ -2,8 +2,8 @@
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
-    public class MySqlProductRepository : IProductRepository, IGeneralProps<Product>
-    {
+    public class MySqlProductRepository : IProductRepository, IGeneralProps<Product>, IDataStorage<Product>
+{
         private readonly string _connectionString;
         private IDataStorage<Product> _storage;
 
@@ -105,13 +105,32 @@ using System.Collections.Generic;
         cmd.Parameters.AddWithValue("@id", product.Id);
         cmd.ExecuteNonQuery();
     }
-    public List<Product> GetAllProducts()
-    {
-        return GetAll();
-    }
     public IDataStorage<Product> GetStorage()
     {
         return _storage;
+    }
+    public void Save()
+    {
+        // btw nothing
+    }
+
+    public void SaveAll(List<Product> items)
+    {
+        using var connection = new MySqlConnection(_connectionString);
+        connection.Open();
+
+        foreach (var product in items)
+        {
+            var sql = @"INSERT INTO products (name, price, description, imagePath, quantity) 
+                    VALUES (@name, @price, @description, @imagePath, @quantity)";
+            using var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@name", product.Name);
+            cmd.Parameters.AddWithValue("@price", product.Price);
+            cmd.Parameters.AddWithValue("@description", product.Description);
+            cmd.Parameters.AddWithValue("@imagePath", product.ImagePath ?? "");
+            cmd.Parameters.AddWithValue("@quantity", product.Quantity);
+            cmd.ExecuteNonQuery();
+        }
     }
 }
 

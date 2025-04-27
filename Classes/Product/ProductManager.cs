@@ -24,7 +24,7 @@ namespace Marketplace
         public void LoadProducts()
         {
             _productPanel.Controls.Clear();
-            foreach (var product in _productRepository.GetAllProducts())
+            foreach (var product in _productRepository.GetAll())
             {
                 AddProductToUI(product);
             }
@@ -59,7 +59,7 @@ namespace Marketplace
 
         public void SortProducts(string selectedSort)
         {
-            var products = _productRepository.GetAllProducts();
+            var products = _productRepository.GetAll();
 
             switch (selectedSort)
             {

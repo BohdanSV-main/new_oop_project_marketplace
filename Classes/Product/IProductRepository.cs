@@ -6,7 +6,7 @@ namespace Marketplace
 {
     public interface IProductRepository : IGeneralProps<Product>
     {
-        List<Product> GetAllProducts();
+        List<Product> GetAll();
         IDataStorage<Product> GetStorage();
         void Update(Product product);
     }

@@ -75,7 +75,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
             foreach (var item in userItems)
             {
-                var product = _productRepository.GetAllProducts().FirstOrDefault(p => p.Id == item.ProductId);
+                var product = _productRepository.GetAll().FirstOrDefault(p => p.Id == item.ProductId);
                 if (product != null && product.Quantity >= item.Quantity)
                 {
                     product.Quantity -= item.Quantity;
