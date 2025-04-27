@@ -8,6 +8,7 @@ namespace Marketplace
     {
         List<Product> GetAllProducts();
         IDataStorage<Product> GetStorage();
+        void Update(Product product);
     }
 
 }

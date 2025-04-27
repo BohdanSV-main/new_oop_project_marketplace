@@ -12,20 +12,20 @@ namespace Marketplace
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            JsonStorage<Product> productStorage = new JsonStorage<Product>("products.json");
-            JsonStorage<User> userStorage = new JsonStorage<User>("users.json");
+            var connectionString = "server=localhost;port=3306;database=marketplacebd;user=root;password=root;";
+
+            IProductRepository productRepository = new MySqlProductRepository(connectionString);
+            IUserRepository userRepository = new MySqlUserRepository(connectionString);
+
             IDataStorage<CartItem> cartStorage = new JsonStorage<CartItem>("cart.json");
-            var shoppingCartRepository = new ShoppingCartRepository(cartStorage);
+            var cartRepository = new ShoppingCartRepository(cartStorage);
+            var shoppingCartManager = new ShoppingCartManager(cartRepository, productRepository);
 
-
-            IProductRepository productRepository = new ProductRepository(productStorage);
-            IUserRepository userRepository = new UserRepository(userStorage);
-
-            LoginForm loginForm = new LoginForm(userRepository);
+            LoginForm loginForm = new LoginForm(userRepository, productRepository, shoppingCartManager);
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new Form1());
+                Application.Run(new Form1(productRepository, userRepository, shoppingCartManager));
             }
         }
     }

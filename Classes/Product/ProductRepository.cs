@@ -17,7 +17,7 @@ public class ProductRepository : GeneralProps<Product>, IProductRepository
     {
         return _storage;
     }
-    public void UpdateProduct(Product updatedProduct)
+    public void Update(Product updatedProduct)
     {
         var allProducts = _storage.GetAll();
         var index = allProducts.FindIndex(p => p.Id == updatedProduct.Id);

@@ -16,11 +16,17 @@ namespace new_oop_marketplace
         private Button btnAction;
         private Button btnSwitch;
         private bool isRegisterMode = false;
+        private IProductRepository _productRepository;
+        private IUserRepository _userRepository;
+        private ShoppingCartManager _shoppingCartManager;
 
-        public LoginForm(IUserRepository userRepository)
+        public LoginForm(IUserRepository userRepository, IProductRepository productRepository, ShoppingCartManager shoppingCartManager)
         {
             InitializeComponent();
             _loginService = new LoginService(userRepository);
+            _userRepository = userRepository;
+            _productRepository = productRepository;
+            _shoppingCartManager = shoppingCartManager;
         }
 
         private void InitializeComponent()
@@ -133,7 +139,7 @@ namespace new_oop_marketplace
             if (success && !isRegisterMode)
             {
                 this.Hide();
-                using (Form1 mainForm = new Form1())
+                using (Form1 mainForm = new Form1(_productRepository, _userRepository, _shoppingCartManager))
                 {
                     mainForm.ShowDialog();
                 }

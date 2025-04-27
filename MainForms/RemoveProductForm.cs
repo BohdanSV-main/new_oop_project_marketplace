@@ -55,11 +55,8 @@ namespace Marketplace
 
         private void LoadProductNames()
         {
-            ComboBox cmbProducts = this.Controls.Find("cmbProducts", true).FirstOrDefault() as ComboBox;
-            if (cmbProducts == null) return;
-
             cmbProducts.Items.Clear();
-            List<Product> products = _storage.GetAll();
+            List<Product> products = _storage.GetAll(); // Отримуємо всі продукти з бази даних
             foreach (var product in products)
             {
                 cmbProducts.Items.Add(product.Name);
@@ -67,7 +64,7 @@ namespace Marketplace
 
             if (cmbProducts.Items.Count > 0)
             {
-                cmbProducts.SelectedIndex = 0;
+                cmbProducts.SelectedIndex = 0; // Вибір першого продукту
             }
         }
 
@@ -76,21 +73,33 @@ namespace Marketplace
             ComboBox cmbProducts = this.Controls.Find("cmbProducts", true).FirstOrDefault() as ComboBox;
             if (cmbProducts == null || cmbProducts.SelectedItem == null) return;
 
+            // Отримуємо назву вибраного продукту
             string selectedProductName = cmbProducts.SelectedItem.ToString();
+
+            // Шукаємо продукт за назвою в репозиторії
             Product productToRemove = _storage.GetAll().FirstOrDefault(p => p.Name == selectedProductName);
 
             if (productToRemove != null)
             {
+                // Видаляємо продукт з бази даних через MySqlProductRepository
                 _storage.Delete(productToRemove.Id);
+
+                // Викликаємо подію, щоб оновити інтерфейс або інші форми
                 OnProductRemoved?.Invoke(this, productToRemove);
+
+                // Сповіщаємо користувача
                 MessageBox.Show($"Товар \"{selectedProductName}\" видалено!", "Успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Оновлюємо список продуктів у ComboBox
                 LoadProductNames();
             }
             else
             {
+                // Якщо продукт не знайдено, виводимо повідомлення
                 MessageBox.Show("Товар не знайдено!", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
         private ComboBox cmbProducts;
         private Button btnRemove;
     }
