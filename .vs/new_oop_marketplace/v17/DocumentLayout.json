@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\jsonstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\jsonstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\iidentifiable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,52 +23,20 @@
       "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\generalprops.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\product\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\shoppingcartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\shoppingcartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,44 +47,40 @@
       "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\shoppingcartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\shoppingcartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\product\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\baseproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\product\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\classes\\user\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:classes\\user\\sessionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\removeproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\removeproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\loginform.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\loginform.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\productitemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|c:\\users\\\u0431\u043E\u0433\u0434\u0430\u043D\\documents\\github\\new_oop_project_marketplace\\mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B277AEB-605E-45AD-B9C5-7F2101A241C2}|new_oop_marketplace.csproj|solutionrelative:mainforms\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 30,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -150,180 +106,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Validation.cs",
               "RelativeDocumentMoniker": "Classes\\Validation.cs",
               "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Validation.cs",
               "RelativeToolTip": "Classes\\Validation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T20:58:00.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "LocalStorage.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\LocalStorage.cs",
-              "RelativeDocumentMoniker": "Classes\\LocalStorage.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\LocalStorage.cs",
-              "RelativeToolTip": "Classes\\LocalStorage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:37:12.913Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserRepository.cs",
-              "RelativeToolTip": "Classes\\User\\UserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T20:36:59.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "RemoveProductForm.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\RemoveProductForm.cs",
-              "RelativeDocumentMoniker": "MainForms\\RemoveProductForm.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\RemoveProductForm.cs",
-              "RelativeToolTip": "MainForms\\RemoveProductForm.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T20:34:25.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "MainForms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.cs",
-              "RelativeToolTip": "MainForms\\LoginForm.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAswHcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T20:33:46.819Z",
+              "WhenOpened": "2025-04-27T15:31:03.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserManager.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\UserManager.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserManager.cs",
-              "RelativeToolTip": "Classes\\User\\UserManager.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T19:23:45.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "LoginForm.resx",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.resx",
-              "RelativeDocumentMoniker": "MainForms\\LoginForm.resx",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.resx",
-              "RelativeToolTip": "MainForms\\LoginForm.resx",
-              "ViewState": "AgIAAKgCAAAAAAAAAAAjwLYCAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-13T19:06:20.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "MainForms\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.Designer.cs",
-              "RelativeToolTip": "MainForms\\Form1.Designer.cs",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAUwPsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T14:21:22.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\User.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\User.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\User.cs",
-              "RelativeToolTip": "Classes\\User\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:32:52.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SessionManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\SessionManager.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\SessionManager.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\SessionManager.cs",
-              "RelativeToolTip": "Classes\\User\\SessionManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:32:40.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProductManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductManager.cs",
-              "RelativeDocumentMoniker": "Classes\\Product\\ProductManager.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductManager.cs",
-              "RelativeToolTip": "Classes\\Product\\ProductManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:32:26.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\LoginService.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\LoginService.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\LoginService.cs",
-              "RelativeToolTip": "Classes\\User\\LoginService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:32:20.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Classes\\User\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:31:59.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IProductRepository.cs",
-              "RelativeToolTip": "Classes\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:31:54.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "IIdentifiable.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IIdentifiable.cs",
               "RelativeDocumentMoniker": "Classes\\IIdentifiable.cs",
@@ -331,63 +127,166 @@
               "RelativeToolTip": "Classes\\IIdentifiable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:31:50.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\CartItem.cs",
-              "RelativeDocumentMoniker": "Classes\\CartItem.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\CartItem.cs",
-              "RelativeToolTip": "Classes\\CartItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:31:27.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ProductItemControls.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs",
-              "RelativeDocumentMoniker": "MainForms\\ProductItemControls.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MainForms\\ProductItemControls.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:21:50.593Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProductItemControls.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs",
-              "RelativeDocumentMoniker": "MainForms\\ProductItemControls.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs",
-              "RelativeToolTip": "MainForms\\ProductItemControls.cs",
-              "ViewState": "AgIAAM4AAAAAAAAAAAAgwOAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:20:29.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T15:29:21.985Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserManager.cs",
+              "RelativeDocumentMoniker": "Classes\\User\\UserManager.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\UserManager.cs",
+              "RelativeToolTip": "Classes\\User\\UserManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:28:31.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\User.cs",
+              "RelativeDocumentMoniker": "Classes\\User\\User.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\User.cs",
+              "RelativeToolTip": "Classes\\User\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:28:27.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\AddProductForm.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "MainForms\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T11:33:31.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BaseProduct.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\BaseProduct.cs",
+              "RelativeDocumentMoniker": "Classes\\Product\\BaseProduct.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\BaseProduct.cs",
+              "RelativeToolTip": "Classes\\Product\\BaseProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:51:30.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "IDataStorage.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IDataStorage.cs",
               "RelativeDocumentMoniker": "Classes\\IDataStorage.cs",
               "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IDataStorage.cs",
               "RelativeToolTip": "Classes\\IDataStorage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:18:03.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T10:46:34.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "SessionManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\SessionManager.cs",
+              "RelativeDocumentMoniker": "Classes\\User\\SessionManager.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\SessionManager.cs",
+              "RelativeToolTip": "Classes\\User\\SessionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:46:14.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\LoginService.cs",
+              "RelativeDocumentMoniker": "Classes\\User\\LoginService.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\LoginService.cs",
+              "RelativeToolTip": "Classes\\User\\LoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:46:12.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Classes\\User\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\User\\IUserRepository.cs",
+              "RelativeToolTip": "Classes\\User\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T10:46:10.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RemoveProductForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\RemoveProductForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\RemoveProductForm.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\RemoveProductForm.cs",
+              "RelativeToolTip": "MainForms\\RemoveProductForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T18:15:01.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AddProductForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\AddProductForm.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
+              "RelativeToolTip": "MainForms\\AddProductForm.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAewKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T17:30:51.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\Product.cs",
+              "RelativeDocumentMoniker": "Classes\\Product\\Product.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\Product.cs",
+              "RelativeToolTip": "Classes\\Product\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T17:30:29.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductItemControls.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs",
+              "RelativeDocumentMoniker": "MainForms\\ProductItemControls.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\ProductItemControls.cs",
+              "RelativeToolTip": "MainForms\\ProductItemControls.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T17:19:20.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs",
+              "RelativeDocumentMoniker": "MainForms\\Form1.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs",
+              "RelativeToolTip": "MainForms\\Form1.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAuwD8AAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:37:14.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IGeneralProps.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\IGeneralProps.cs",
               "RelativeDocumentMoniker": "Classes\\IGeneralProps.cs",
@@ -395,146 +294,55 @@
               "RelativeToolTip": "Classes\\IGeneralProps.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:18:38.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T16:23:55.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JsonStorage.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\JsonStorage.cs",
-              "RelativeDocumentMoniker": "Classes\\JsonStorage.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\JsonStorage.cs",
-              "RelativeToolTip": "Classes\\JsonStorage.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:16:11.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "GeneralProps.cs",
               "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\GeneralProps.cs",
               "RelativeDocumentMoniker": "Classes\\GeneralProps.cs",
               "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\GeneralProps.cs",
               "RelativeToolTip": "Classes\\GeneralProps.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:13:05.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T16:23:53.974Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\Product\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductRepository.cs",
-              "RelativeToolTip": "Classes\\Product\\ProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductManager.cs",
+              "RelativeDocumentMoniker": "Classes\\Product\\ProductManager.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\ProductManager.cs",
+              "RelativeToolTip": "Classes\\Product\\ProductManager.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwBcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:12:58.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-26T15:50:51.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "MainForms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\LoginForm.cs",
+              "RelativeToolTip": "MainForms\\LoginForm.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAtwI8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T15:50:26.421Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "ShoppingCartManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\ShoppingCartManager.cs",
-              "RelativeDocumentMoniker": "Classes\\ShoppingCartManager.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\ShoppingCartManager.cs",
-              "RelativeToolTip": "Classes\\ShoppingCartManager.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAApAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:09:24.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ShoppingCartRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\ShoppingCartRepository.cs",
-              "RelativeDocumentMoniker": "Classes\\ShoppingCartRepository.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\ShoppingCartRepository.cs",
-              "RelativeToolTip": "Classes\\ShoppingCartRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:09:23.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\Product.cs",
-              "RelativeDocumentMoniker": "Classes\\Product\\Product.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\Product.cs",
-              "RelativeToolTip": "Classes\\Product\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T10:06:38.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
-              "RelativeDocumentMoniker": "MainForms\\AddProductForm.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MainForms\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:58:16.008Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddProductForm.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
-              "RelativeDocumentMoniker": "MainForms\\AddProductForm.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\AddProductForm.cs",
-              "RelativeToolTip": "MainForms\\AddProductForm.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAAwLcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:58:11.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseProduct.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\BaseProduct.cs",
-              "RelativeDocumentMoniker": "Classes\\Product\\BaseProduct.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\Classes\\Product\\BaseProduct.cs",
-              "RelativeToolTip": "Classes\\Product\\BaseProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:55:31.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs",
-              "RelativeDocumentMoniker": "MainForms\\Form1.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "MainForms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:48:31.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs",
-              "RelativeDocumentMoniker": "MainForms\\Form1.cs",
-              "ToolTip": "C:\\Users\\\u0411\u043E\u0433\u0434\u0430\u043D\\Documents\\GitHub\\new_oop_project_marketplace\\MainForms\\Form1.cs",
-              "RelativeToolTip": "MainForms\\Form1.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAWwHoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T09:37:27.63Z"
+              "WhenOpened": "2025-04-26T15:34:39.07Z"
             }
           ]
         }
