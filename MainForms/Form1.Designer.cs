@@ -68,6 +68,7 @@
             // mainPage
             // 
             mainPage.BackColor = Color.FromArgb(224, 224, 224);
+            mainPage.BackgroundImage = Properties.Resources.backFrame;
             mainPage.Controls.Add(comboBoxSort);
             mainPage.Controls.Add(flowLayoutPanelProducts);
             mainPage.Location = new Point(4, 24);
@@ -91,6 +92,7 @@
             // flowLayoutPanelProducts
             // 
             flowLayoutPanelProducts.AutoScroll = true;
+            flowLayoutPanelProducts.BackColor = Color.Transparent;
             flowLayoutPanelProducts.Location = new Point(199, 30);
             flowLayoutPanelProducts.Margin = new Padding(10);
             flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
@@ -100,7 +102,8 @@
             // 
             // addProductPage
             // 
-            addProductPage.BackColor = Color.FromArgb(224, 224, 224);
+            addProductPage.BackColor = Color.Transparent;
+            addProductPage.BackgroundImage = Properties.Resources.backFrame;
             addProductPage.Controls.Add(btnOpenRemoveForm);
             addProductPage.Controls.Add(addProduct);
             addProductPage.Location = new Point(4, 24);
@@ -113,6 +116,8 @@
             // btnOpenRemoveForm
             // 
             btnOpenRemoveForm.BackColor = Color.LightGray;
+            btnOpenRemoveForm.BackgroundImage = Properties.Resources.bgBtn2;
+            btnOpenRemoveForm.BackgroundImageLayout = ImageLayout.Stretch;
             btnOpenRemoveForm.Location = new Point(198, 24);
             btnOpenRemoveForm.Name = "btnOpenRemoveForm";
             btnOpenRemoveForm.Size = new Size(124, 61);
@@ -124,6 +129,8 @@
             // addProduct
             // 
             addProduct.BackColor = Color.LightGray;
+            addProduct.BackgroundImage = Properties.Resources.bgBtn2;
+            addProduct.BackgroundImageLayout = ImageLayout.Stretch;
             addProduct.Location = new Point(68, 24);
             addProduct.Name = "addProduct";
             addProduct.Size = new Size(124, 61);
@@ -135,6 +142,7 @@
             // pageShoppingList
             // 
             pageShoppingList.BackColor = Color.FromArgb(224, 224, 224);
+            pageShoppingList.BackgroundImage = Properties.Resources.backFrame;
             pageShoppingList.Controls.Add(cartPanel);
             pageShoppingList.Controls.Add(ConfirmOrderButton);
             pageShoppingList.Location = new Point(4, 24);
@@ -143,19 +151,24 @@
             pageShoppingList.Size = new Size(1413, 699);
             pageShoppingList.TabIndex = 2;
             pageShoppingList.Text = "Список покупок";
+            pageShoppingList.Click += this.pageShoppingList_Click;
             // 
             // cartPanel
             // 
             cartPanel.AutoScroll = true;
+            cartPanel.BackgroundImage = (Image)resources.GetObject("cartPanel.BackgroundImage");
             cartPanel.FlowDirection = FlowDirection.TopDown;
             cartPanel.Location = new Point(63, 24);
             cartPanel.Name = "cartPanel";
             cartPanel.Size = new Size(971, 316);
             cartPanel.TabIndex = 2;
             cartPanel.WrapContents = false;
+            cartPanel.Paint += cartPanel_Paint_1;
             // 
             // ConfirmOrderButton
             // 
+            ConfirmOrderButton.BackgroundImage = Properties.Resources.bgBtn21;
+            ConfirmOrderButton.BackgroundImageLayout = ImageLayout.Stretch;
             ConfirmOrderButton.Location = new Point(97, 604);
             ConfirmOrderButton.Name = "ConfirmOrderButton";
             ConfirmOrderButton.Size = new Size(459, 52);
@@ -218,7 +231,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(224, 224, 224);
+            BackColor = Color.FromArgb(192, 192, 255);
             ClientSize = new Size(1445, 804);
             Controls.Add(panel1);
             Controls.Add(mainFrame);

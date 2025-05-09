@@ -61,9 +61,9 @@ namespace new_oop_marketplace
         private void btnOpenRemoveForm_Click(object sender, EventArgs e)
         {
 
-                RemoveProductForm removeForm = new RemoveProductForm(_productRepository);
-                removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
-                removeForm.ShowDialog();
+            RemoveProductForm removeForm = new RemoveProductForm(_productRepository);
+            removeForm.OnProductRemoved += (s, product) => _productManager.LoadProducts();
+            removeForm.ShowDialog();
         }
         private void btnUser_Click(object sender, EventArgs e)
         {
@@ -135,6 +135,11 @@ namespace new_oop_marketplace
             UpdateCartUI();
             _productManager.LoadProducts();
             MessageBox.Show("Замовлення підтверджено!");
+        }
+
+        private void cartPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

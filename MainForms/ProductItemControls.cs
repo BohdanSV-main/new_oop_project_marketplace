@@ -78,6 +78,7 @@ namespace Marketplace
             // 
             // pictureBox
             // 
+            pictureBox.BackColor = Color.Transparent;
             pictureBox.Location = new Point(0, 28);
             pictureBox.Name = "pictureBox";
             pictureBox.Size = new Size(277, 151);
@@ -88,6 +89,7 @@ namespace Marketplace
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Segoe UI", 12F);
             lblName.Location = new Point(3, 182);
             lblName.Name = "lblName";
@@ -98,6 +100,7 @@ namespace Marketplace
             // lblPrice
             // 
             lblPrice.AutoSize = true;
+            lblPrice.BackColor = Color.Transparent;
             lblPrice.Font = new Font("Segoe UI", 12F);
             lblPrice.Location = new Point(3, 222);
             lblPrice.Name = "lblPrice";
@@ -110,6 +113,7 @@ namespace Marketplace
             // 
             lblDescription.AutoEllipsis = true;
             lblDescription.AutoSize = true;
+            lblDescription.BackColor = Color.Transparent;
             lblDescription.Location = new Point(3, 254);
             lblDescription.MaximumSize = new Size(0, 250);
             lblDescription.Name = "lblDescription";
@@ -120,6 +124,7 @@ namespace Marketplace
             // lblId
             // 
             lblId.AutoSize = true;
+            lblId.BackColor = Color.Transparent;
             lblId.Font = new Font("Segoe UI", 12F);
             lblId.Location = new Point(3, 4);
             lblId.Name = "lblId";
@@ -142,6 +147,7 @@ namespace Marketplace
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
+            lblQuantity.BackColor = Color.Transparent;
             lblQuantity.Location = new Point(137, 7);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(53, 15);
@@ -161,6 +167,7 @@ namespace Marketplace
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            BackgroundImage = new_oop_marketplace.Properties.Resources.bg_productPic;
             Controls.Add(numericQuantity);
             Controls.Add(lblQuantity);
             Controls.Add(addToCartButton);
@@ -174,6 +181,7 @@ namespace Marketplace
             Margin = new Padding(15);
             Name = "ProductItemControl";
             Size = new Size(280, 300);
+            Load += ProductItemControl_Load;
             ((ISupportInitialize)pictureBox).EndInit();
             ((ISupportInitialize)numericQuantity).EndInit();
             ResumeLayout(false);
@@ -226,6 +234,11 @@ namespace Marketplace
         }
 
         private void numericQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductItemControl_Load(object sender, EventArgs e)
         {
 
         }
