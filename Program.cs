@@ -17,7 +17,7 @@ namespace Marketplace
             IProductRepository productRepository = new MySqlProductRepository(connectionString);
             IUserRepository userRepository = new MySqlUserRepository(connectionString);
 
-            IDataStorage<CartItem> cartStorage = new InMemoryStorage<CartItem>();
+            IDataStorage<CartItem> cartStorage = new LocalStorage<CartItem>();
             var cartRepository = new ShoppingCartRepository(cartStorage);
             var shoppingCartManager = new ShoppingCartManager(cartRepository, productRepository);
 

@@ -167,7 +167,6 @@ namespace Marketplace
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
-            BackgroundImage = new_oop_marketplace.Properties.Resources.bg_productPic;
             Controls.Add(numericQuantity);
             Controls.Add(lblQuantity);
             Controls.Add(addToCartButton);

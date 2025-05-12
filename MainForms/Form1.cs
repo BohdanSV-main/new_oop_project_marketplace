@@ -141,5 +141,10 @@ namespace new_oop_marketplace
         {
 
         }
+
+        private void mainPage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

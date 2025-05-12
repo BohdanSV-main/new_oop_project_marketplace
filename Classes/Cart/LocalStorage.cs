@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-public class InMemoryStorage<T> : IDataStorage<T> where T : class, IIdentifiable
+public class LocalStorage<T> : IDataStorage<T> where T : class, IIdentifiable
 {
     private List<T> _items = new List<T>();
 
