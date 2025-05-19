@@ -26,7 +26,7 @@ namespace Marketplace
             // 
             // cmbProducts
             // 
-            cmbProducts.Location = new Point(-1, 12);
+            cmbProducts.Location = new Point(12, 12);
             cmbProducts.Name = "cmbProducts";
             cmbProducts.Size = new Size(121, 23);
             cmbProducts.TabIndex = 1;

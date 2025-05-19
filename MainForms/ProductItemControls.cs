@@ -64,6 +64,7 @@ namespace Marketplace
 
         private void InitializeComponent()
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(ProductItemControl));
             pictureBox = new PictureBox();
             lblName = new Label();
             lblPrice = new Label();
@@ -79,9 +80,10 @@ namespace Marketplace
             // pictureBox
             // 
             pictureBox.BackColor = Color.Transparent;
+            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox.Location = new Point(0, 28);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(277, 151);
+            pictureBox.Size = new Size(273, 151);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.TabIndex = 1;
             pictureBox.TabStop = false;
@@ -90,10 +92,11 @@ namespace Marketplace
             // 
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
-            lblName.Font = new Font("Segoe UI", 12F);
+            lblName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lblName.ForeColor = Color.Black;
             lblName.Location = new Point(3, 182);
             lblName.Name = "lblName";
-            lblName.Size = new Size(36, 21);
+            lblName.Size = new Size(40, 21);
             lblName.TabIndex = 2;
             lblName.Text = "Text";
             // 
@@ -101,10 +104,10 @@ namespace Marketplace
             // 
             lblPrice.AutoSize = true;
             lblPrice.BackColor = Color.Transparent;
-            lblPrice.Font = new Font("Segoe UI", 12F);
-            lblPrice.Location = new Point(3, 222);
+            lblPrice.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lblPrice.Location = new Point(0, 212);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(44, 21);
+            lblPrice.Size = new Size(46, 21);
             lblPrice.TabIndex = 3;
             lblPrice.Text = "Price";
             lblPrice.Click += lblPrice_Click;
@@ -114,10 +117,11 @@ namespace Marketplace
             lblDescription.AutoEllipsis = true;
             lblDescription.AutoSize = true;
             lblDescription.BackColor = Color.Transparent;
-            lblDescription.Location = new Point(3, 254);
+            lblDescription.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lblDescription.Location = new Point(3, 243);
             lblDescription.MaximumSize = new Size(0, 250);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(67, 15);
+            lblDescription.Size = new Size(68, 15);
             lblDescription.TabIndex = 4;
             lblDescription.Text = "Description";
             // 
@@ -125,10 +129,10 @@ namespace Marketplace
             // 
             lblId.AutoSize = true;
             lblId.BackColor = Color.Transparent;
-            lblId.Font = new Font("Segoe UI", 12F);
+            lblId.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             lblId.Location = new Point(3, 4);
             lblId.Name = "lblId";
-            lblId.Size = new Size(25, 21);
+            lblId.Size = new Size(26, 21);
             lblId.TabIndex = 5;
             lblId.Text = "ID";
             // 
@@ -137,7 +141,7 @@ namespace Marketplace
             addToCartButton.BackColor = Color.FromArgb(128, 255, 128);
             addToCartButton.BackgroundImage = new_oop_marketplace.Properties.Resources.shopping_cart;
             addToCartButton.BackgroundImageLayout = ImageLayout.Stretch;
-            addToCartButton.Location = new Point(253, 3);
+            addToCartButton.Location = new Point(242, 0);
             addToCartButton.Name = "addToCartButton";
             addToCartButton.Size = new Size(24, 23);
             addToCartButton.TabIndex = 6;
@@ -148,15 +152,17 @@ namespace Marketplace
             // 
             lblQuantity.AutoSize = true;
             lblQuantity.BackColor = Color.Transparent;
-            lblQuantity.Location = new Point(137, 7);
+            lblQuantity.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lblQuantity.Location = new Point(105, 4);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(53, 15);
+            lblQuantity.Size = new Size(72, 21);
             lblQuantity.TabIndex = 7;
             lblQuantity.Text = "Quantity";
             // 
             // numericQuantity
             // 
-            numericQuantity.Location = new Point(219, 2);
+            numericQuantity.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            numericQuantity.Location = new Point(208, 2);
             numericQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericQuantity.Name = "numericQuantity";
             numericQuantity.Size = new Size(28, 23);
@@ -167,6 +173,8 @@ namespace Marketplace
             // ProductItemControl
             // 
             BackColor = Color.LightGray;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BorderStyle = BorderStyle.Fixed3D;
             Controls.Add(numericQuantity);
             Controls.Add(lblQuantity);
             Controls.Add(addToCartButton);
@@ -179,7 +187,7 @@ namespace Marketplace
             ForeColor = Color.Black;
             Margin = new Padding(15);
             Name = "ProductItemControl";
-            Size = new Size(280, 300);
+            Size = new Size(276, 296);
             Load += ProductItemControl_Load;
             ((ISupportInitialize)pictureBox).EndInit();
             ((ISupportInitialize)numericQuantity).EndInit();
@@ -238,6 +246,11 @@ namespace Marketplace
         }
 
         private void ProductItemControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDescription_Click(object sender, EventArgs e)
         {
 
         }

@@ -104,10 +104,10 @@ namespace new_oop_marketplace
                 {
                     Text = $"{item.ProductName} - {item.ProductPrice} דנם ץ {item.Quantity} רע.",
                     AutoSize = true,
-                    Font = new Font("Segoe UI", 10),
-                    Padding = new Padding(5),
-                    Margin = new Padding(5),
-                    BackColor = Color.WhiteSmoke
+                    Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204),
+                    Padding = new Padding(10),
+                    Margin = new Padding(10),
+                    BackColor = Color.Transparent
                 };
                 cartPanel.Controls.Add(label);
             }

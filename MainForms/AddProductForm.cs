@@ -42,6 +42,7 @@ namespace Marketplace
             // 
             // txtName
             // 
+            txtName.BackColor = Color.FromArgb(224, 224, 224);
             txtName.Location = new Point(20, 20);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "Назва товару";
@@ -51,6 +52,7 @@ namespace Marketplace
             // 
             // txtPrice
             // 
+            txtPrice.BackColor = Color.FromArgb(224, 224, 224);
             txtPrice.Location = new Point(20, 60);
             txtPrice.Name = "txtPrice";
             txtPrice.PlaceholderText = "Ціна (грн)";
@@ -59,6 +61,7 @@ namespace Marketplace
             // 
             // txtDescription
             // 
+            txtDescription.BackColor = Color.FromArgb(224, 224, 224);
             txtDescription.Location = new Point(20, 100);
             txtDescription.Multiline = true;
             txtDescription.Name = "txtDescription";
@@ -68,6 +71,7 @@ namespace Marketplace
             // 
             // txtImagePath
             // 
+            txtImagePath.BackColor = Color.FromArgb(224, 224, 224);
             txtImagePath.Location = new Point(20, 180);
             txtImagePath.Name = "txtImagePath";
             txtImagePath.ReadOnly = true;
@@ -76,36 +80,46 @@ namespace Marketplace
             // 
             // pictureBoxPreview
             // 
+            pictureBoxPreview.BackColor = Color.FromArgb(224, 224, 224);
             pictureBoxPreview.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxPreview.Location = new Point(20, 220);
+            pictureBoxPreview.Location = new Point(20, 227);
             pictureBoxPreview.Name = "pictureBoxPreview";
-            pictureBoxPreview.Size = new Size(100, 100);
+            pictureBoxPreview.Size = new Size(120, 125);
             pictureBoxPreview.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxPreview.TabIndex = 5;
             pictureBoxPreview.TabStop = false;
+            pictureBoxPreview.Click += pictureBoxPreview_Click;
             // 
             // btnSelectImage
             // 
-            btnSelectImage.Location = new Point(260, 180);
+            btnSelectImage.BackColor = Color.FromArgb(224, 224, 224);
+            btnSelectImage.Location = new Point(256, 180);
             btnSelectImage.Name = "btnSelectImage";
             btnSelectImage.Size = new Size(75, 23);
             btnSelectImage.TabIndex = 4;
             btnSelectImage.Text = "Обрати...";
+            btnSelectImage.UseVisualStyleBackColor = false;
             btnSelectImage.Click += btnSelectImage_Click;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(20, 340);
+            btnSave.BackColor = Color.White;
+            btnSave.BackgroundImage = (Image)resources.GetObject("btnSave.BackgroundImage");
+            btnSave.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSave.FlatAppearance.BorderColor = Color.FromArgb(192, 192, 255);
+            btnSave.Location = new Point(256, 346);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 6;
             btnSave.Text = "Зберегти";
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // Quan
             // 
             Quan.AutoSize = true;
-            Quan.Location = new Point(126, 225);
+            Quan.BackColor = Color.Transparent;
+            Quan.Location = new Point(158, 227);
             Quan.Name = "Quan";
             Quan.Size = new Size(59, 15);
             Quan.TabIndex = 7;
@@ -113,13 +127,16 @@ namespace Marketplace
             // 
             // numericQuantity
             // 
-            numericQuantity.Location = new Point(191, 225);
+            numericQuantity.BackColor = Color.FromArgb(224, 224, 224);
+            numericQuantity.Location = new Point(158, 245);
             numericQuantity.Name = "numericQuantity";
             numericQuantity.Size = new Size(120, 23);
             numericQuantity.TabIndex = 8;
+            numericQuantity.ValueChanged += numericQuantity_ValueChanged;
             // 
             // AddProductForm
             // 
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(334, 381);
             Controls.Add(numericQuantity);
             Controls.Add(Quan);
@@ -190,6 +207,16 @@ namespace Marketplace
 
 
         private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericQuantity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxPreview_Click(object sender, EventArgs e)
         {
 
         }

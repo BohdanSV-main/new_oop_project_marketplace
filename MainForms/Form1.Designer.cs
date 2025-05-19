@@ -35,6 +35,7 @@
             comboBoxSort = new ComboBox();
             flowLayoutPanelProducts = new FlowLayoutPanel();
             addProductPage = new TabPage();
+            pictureBox1 = new PictureBox();
             btnOpenRemoveForm = new Button();
             addProduct = new Button();
             pageShoppingList = new TabPage();
@@ -45,14 +46,13 @@
             btnUser = new Button();
             userMenu = new ContextMenuStrip(components);
             menuItemLogout = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
             mainFrame.SuspendLayout();
             mainPage.SuspendLayout();
             addProductPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pageShoppingList.SuspendLayout();
             panel1.SuspendLayout();
             userMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // mainFrame
@@ -70,7 +70,7 @@
             // mainPage
             // 
             mainPage.BackColor = Color.FromArgb(224, 224, 224);
-            mainPage.BackgroundImage = Properties.Resources.backFrame;
+            mainPage.BackgroundImage = (Image)resources.GetObject("mainPage.BackgroundImage");
             mainPage.Controls.Add(comboBoxSort);
             mainPage.Controls.Add(flowLayoutPanelProducts);
             mainPage.Location = new Point(4, 24);
@@ -106,7 +106,7 @@
             // addProductPage
             // 
             addProductPage.BackColor = Color.Transparent;
-            addProductPage.BackgroundImage = Properties.Resources.backFrame;
+            addProductPage.BackgroundImage = (Image)resources.GetObject("addProductPage.BackgroundImage");
             addProductPage.Controls.Add(pictureBox1);
             addProductPage.Controls.Add(btnOpenRemoveForm);
             addProductPage.Controls.Add(addProduct);
@@ -115,39 +115,46 @@
             addProductPage.Padding = new Padding(3);
             addProductPage.Size = new Size(1413, 699);
             addProductPage.TabIndex = 1;
-            addProductPage.Text = "Додати продукт";
+            addProductPage.Text = "Адмін панель";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(761, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(617, 633);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // btnOpenRemoveForm
             // 
             btnOpenRemoveForm.BackColor = Color.LightGray;
-            btnOpenRemoveForm.BackgroundImage = Properties.Resources.bgBtn21;
+            btnOpenRemoveForm.BackgroundImage = (Image)resources.GetObject("btnOpenRemoveForm.BackgroundImage");
             btnOpenRemoveForm.BackgroundImageLayout = ImageLayout.Stretch;
             btnOpenRemoveForm.ForeColor = Color.Black;
-            btnOpenRemoveForm.Location = new Point(198, 24);
+            btnOpenRemoveForm.Location = new Point(499, 296);
             btnOpenRemoveForm.Name = "btnOpenRemoveForm";
-            btnOpenRemoveForm.Size = new Size(124, 61);
+            btnOpenRemoveForm.Size = new Size(191, 131);
             btnOpenRemoveForm.TabIndex = 1;
-            btnOpenRemoveForm.Text = "Видалити продукт";
             btnOpenRemoveForm.UseVisualStyleBackColor = false;
             btnOpenRemoveForm.Click += btnOpenRemoveForm_Click;
             // 
             // addProduct
             // 
             addProduct.BackColor = Color.LightGray;
-            addProduct.BackgroundImage = Properties.Resources.bgBtn21;
+            addProduct.BackgroundImage = (Image)resources.GetObject("addProduct.BackgroundImage");
             addProduct.BackgroundImageLayout = ImageLayout.Stretch;
-            addProduct.Location = new Point(68, 24);
+            addProduct.Location = new Point(50, 298);
             addProduct.Name = "addProduct";
-            addProduct.Size = new Size(124, 61);
+            addProduct.Size = new Size(200, 130);
             addProduct.TabIndex = 0;
-            addProduct.Text = "Додати новий продукт";
             addProduct.UseVisualStyleBackColor = false;
             addProduct.Click += addProduct_Click;
             // 
             // pageShoppingList
             // 
             pageShoppingList.BackColor = Color.FromArgb(224, 224, 224);
-            pageShoppingList.BackgroundImage = Properties.Resources.backFrame;
+            pageShoppingList.BackgroundImage = (Image)resources.GetObject("pageShoppingList.BackgroundImage");
             pageShoppingList.Controls.Add(cartPanel);
             pageShoppingList.Controls.Add(ConfirmOrderButton);
             pageShoppingList.Location = new Point(4, 24);
@@ -161,17 +168,18 @@
             // 
             cartPanel.AutoScroll = true;
             cartPanel.BackgroundImage = (Image)resources.GetObject("cartPanel.BackgroundImage");
+            cartPanel.BorderStyle = BorderStyle.FixedSingle;
             cartPanel.FlowDirection = FlowDirection.TopDown;
             cartPanel.Location = new Point(63, 24);
             cartPanel.Name = "cartPanel";
-            cartPanel.Size = new Size(971, 316);
+            cartPanel.Size = new Size(1000, 320);
             cartPanel.TabIndex = 2;
             cartPanel.WrapContents = false;
             cartPanel.Paint += cartPanel_Paint_1;
             // 
             // ConfirmOrderButton
             // 
-            ConfirmOrderButton.BackgroundImage = Properties.Resources.bgBtn21;
+            ConfirmOrderButton.BackgroundImage = (Image)resources.GetObject("ConfirmOrderButton.BackgroundImage");
             ConfirmOrderButton.BackgroundImageLayout = ImageLayout.Stretch;
             ConfirmOrderButton.Location = new Point(97, 604);
             ConfirmOrderButton.Name = "ConfirmOrderButton";
@@ -231,15 +239,6 @@
             menuItemLogout.Text = "Вийти";
             menuItemLogout.Click += menuItemLogout_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(761, 24);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(617, 633);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,11 +255,11 @@
             mainFrame.ResumeLayout(false);
             mainPage.ResumeLayout(false);
             addProductPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pageShoppingList.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             userMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

@@ -79,13 +79,14 @@ namespace new_oop_marketplace
             // 
             // btnAction
             // 
+            btnAction.BackColor = Color.Transparent;
             btnAction.Font = new Font("Segoe UI", 12F);
-            btnAction.Location = new Point(463, 286);
+            btnAction.Location = new Point(463, 302);
             btnAction.Name = "btnAction";
-            btnAction.Size = new Size(189, 28);
+            btnAction.Size = new Size(241, 37);
             btnAction.TabIndex = 4;
             btnAction.Text = "Увійти";
-            btnAction.UseVisualStyleBackColor = true;
+            btnAction.UseVisualStyleBackColor = false;
             btnAction.Click += btnAction_Click;
             // 
             // btnSwitch
